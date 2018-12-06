@@ -1,0 +1,1257 @@
+EUROPEAN CLIMATE ASSESSMENT & DATASET (ECA&D), file created on 20-06-2017
+THESE DATA CAN BE USED FREELY PROVIDED THAT THE FOLLOWING SOURCE IS ACKNOWLEDGED:
+
+Klein Tank, A.M.G. and Coauthors, 2002. Daily dataset of 20th-century surface
+air temperature and precipitation series for the European Climate Assessment.
+Int. J. of Climatol., 22, 1441-1453.
+Data and metadata available at http://www.ecad.eu
+
+
+----------------------------------------------------------------
+27,PRAHA-KLEMENTINUM,CZECH REPUBLIC,+50:05:11,+014:24:59,191 m 
+----------------------------------------------------------------
+* Land use:
+station located in the Prague old town, situated at the rooftops
+* Soil type:
+not applicable
+* Surface coverage:
+not applicable
+* History:
+station is a manual voluntary climate station
+
+----------------------------------------------------------------
+510,MILESOVKA,CZECH REPUBLIC,+50:33:18,+013:55:51,831 m 
+----------------------------------------------------------------
+* Land use:
+situated on a hill side with nearby trees and brushes in the vicinity of the observatory building
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 13:55:53E, 50:33:17N at 833m to 13:55:53E, 50:33:17N at 830.5m on January 8 1997<br>subsequently relocated to current position on November 28 2006<br>transition from manual to automated observations on January 8 1997
+
+----------------------------------------------------------------
+662,HOLESOV,CZECH REPUBLIC,+49:19:14,+017:34:12,222 m 
+----------------------------------------------------------------
+* Land use:
+Partly open and flat terrain with a small building in the vicinity. Surrounded by arable lands and located south of the city and west of forested hilly terrain
+* Soil type:
+clay
+* Surface coverage:
+grass
+* History:
+relocated from 17:34:24E, 49:19:07N at 223.6 m to current position on June 19 2009<br>transition from manual voluntary climate station to manual synoptic station on January 4 1953<br>transition from manual to automated observations on September 25 1996 
+
+----------------------------------------------------------------
+663,BRNO (TURANY) AIRPORT,CZECH REPUBLIC,+49:09:11,+016:41:20,241 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 16:42:00E, 49:09:00N at 245m to 16:41:44E, 49:09:35 at 241m on April 14 1958<br>subsequently relocated to current position on January 1 1997<br>transition from manual to automated observations on January 1 1997
+
+----------------------------------------------------------------
+664,CHURANOV,CZECH REPUBLIC,+49:04:06,+013:36:55,1118 m 
+----------------------------------------------------------------
+* Land use:
+Forested and hilly terrain with meadows in the lower areas. A wooden building and trees in the vicinity.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 13:36:47E, 49:04:06N at 1118 m to current position on January 1 2000<br>transition from manual to automated observations on January 1 2000
+
+----------------------------------------------------------------
+665,HRADEC KRALOVE,CZECH REPUBLIC,+50:10:40,+015:50:18,278 m 
+----------------------------------------------------------------
+* Land use:
+Located in the transition zone between forested hills on the east, the Elbe river and arable lands on the west and the city in the north.
+* Soil type:
+loam
+* Surface coverage:
+grass
+* History:
+relocated from 15:51:37E to 50:10:33 at 276m to 15:50:19E, 50:10:34N at 278m on January 1 1953<br>subsequently relocated to 15:50:18E, 50:10:40N at 278m<br>transition from manual to automated observations on January 1 1999
+
+----------------------------------------------------------------
+666,SVRATOUCH,CZECH REPUBLIC,+49:44:06,+016:02:03,734 m 
+----------------------------------------------------------------
+* Land use:
+Situated in hilly terrain surrounded by arable lands with forestry at a distance. Brushes, tree and building in the vicinity of the terrain.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+transition from manual synoptic station to manual voluntary climate station on January 1 1961<br>transition from manual to automated observations on January 1 1999
+
+----------------------------------------------------------------
+667,CHEB,CZECH REPUBLIC,+50:04:06,+012:23:29,483 m 
+----------------------------------------------------------------
+* Land use:
+Open landscape east of the city, surrounded by arable land. Located at airport.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 12:23:20E, 50:04:26N at 471 m to current position on January 1 2001<br>transition from manual to automated observations on January 5 2001
+
+----------------------------------------------------------------
+668,MOSNOV,CZECH REPUBLIC,+49:41:54,+018:07:09,250 m 
+----------------------------------------------------------------
+* Land use:
+Open and flat landscape, surrounded by meadows and arable lands. Located at airport.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 18:07:12E, 49:41:39N at 250.4 m to current position on July 3 1999<br>transition from manual to automated observations on January 1 2000
+
+----------------------------------------------------------------
+669,PRIBYSLAV,CZECH REPUBLIC,+49:34:58,+015:45:45,533 m 
+----------------------------------------------------------------
+* Land use:
+Open and flat landscape, surrounded by meadows and arable lands. Located at airport.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 15:45:45E, 49:35:25N at 530 m to current position on January 1 2000<br>transition from manual to automated observations on January 1 2000
+
+----------------------------------------------------------------
+670,LIBEREC; AIRPORT,CZECH REPUBLIC,+50:46:11,+015:01:26,398 m 
+----------------------------------------------------------------
+* Land use:
+Partly open landscape with the city to the east and forested mountains to the west. Located at the local airclub.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 15:01:30E, 50:46:09N at 398 m to current position on May 21 2001<br>transition from manual to automated observations on January 1 2000
+
+----------------------------------------------------------------
+2017,KOSTELNI MYSLOVA,CZECH REPUBLIC,+49:09:33,+015:26:21,569 m 
+----------------------------------------------------------------
+* Land use:
+Partly open landscape with trees, meadows and arable lands.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 15:26:20E, 49:09:33N at 569 m to current position on January 1 1999<br>transition from manual to automated observations on January 1 1999
+
+----------------------------------------------------------------
+2018,USTI NAD ORLICI,CZECH REPUBLIC,+49:58:49,+016:25:20,402 m 
+----------------------------------------------------------------
+* Land use:
+Partly open, hilly landscape with the city to the west and a forested areas to the ENE. Located near the airstrip.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 16:25:60E, 49:58:60N at 557 m to 16:25:20E, 49:58:49N at 399 m on January 1 1971, subsequent relocation to 16:25:20E, 48:58:49N at 402 m on January 1 1990<br>transition from manual synoptic station to manual voluntary climate station on January 1 1990<br>transition from manual to automated observations on January 1 2004
+
+----------------------------------------------------------------
+2020,LYSA HORA,CZECH REPUBLIC,+49:32:46,+018:26:51,1322 m 
+----------------------------------------------------------------
+* Land use:
+Located on a hill top surrounded by grasslands and forests. Terrain close to the observatory and a hotel is in the vicinity.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 18:26:54E, 49:32:47N at 1320 m to 18:26:52E, 49:32:46N at 1322 m on October 6 1954, subsequent relocation to 18:26:52E, 49:32:46N at 1321.8 m on January 1 2000<br>transition from manual to automated observations on January 1 2000
+
+----------------------------------------------------------------
+3556,KUCHAROVICE,CZECH REPUBLIC,+48:52:52,+016:05:07,334 m 
+----------------------------------------------------------------
+* Land use:
+Partly open landscape with arable lands and meadows.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 16:05:11E, 48:52:57N at 334m to 16:05:07E, 48:52:52N at 334 on January 1 1999<br>transition from manual to automated observations on January 1 1999 
+
+----------------------------------------------------------------
+3557,CESKE BUDEJOVICE,CZECH REPUBLIC,+48:57:07,+014:28:11,395 m 
+----------------------------------------------------------------
+* Land use:
+Station located in the southern outskirts of the city in an enclosed terrain.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 14:28:10E, 48:58:29N at 387 m to 14:28:02E, 48:57:52N at 388 m on July 2 1976, subsequent relocation to 14:28:17E, 48:57:07N at 394.06 m on January 1 2009<br>transition from manual to automated observations on January 1 2009
+
+----------------------------------------------------------------
+3558,TABOR,CZECH REPUBLIC,+49:26:10,+014:39:37,459 m 
+----------------------------------------------------------------
+* Land use:
+Partly open landscape with meadows, arable lands and watersurfaces in the vicinity.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 14:40:09E, 49:24:49N at 440 m to current position on January 1 1990<br>transition from manual to automated observations on January 7 1997
+
+----------------------------------------------------------------
+3559,KLATOVY,CZECH REPUBLIC,+49:23:26,+013:18:11,425 m 
+----------------------------------------------------------------
+* Land use:
+Partly open landscape with arable lands and meadows and with trees and buildings in the vicinity of the terrain. Terrain located in the SE suburbs of the city.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 13:18:06E, 49:23:32N at 430 m to 13:18:08E, 49:23:27N at 430 m on May 1 1999, subsequent relocation to 13:18:10E, 49:23:26N at 425 m on April 16 1999<br>transition from manual to automated observations on January 5 1999
+
+----------------------------------------------------------------
+3560,KARLOVY VARY,CZECH REPUBLIC,+50:12:06,+012:54:51,603 m 
+----------------------------------------------------------------
+* Land use:
+Immediate surroundings of the terrain are meadows and arable lands, at a larger distance forested hills are present. Located at an airport.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 12:54:47E, 50:12:07N at 603 m to current position on October 16 2006<br>transition from manual to automated observations on January 1 2000
+
+----------------------------------------------------------------
+3561,CERVENA,CZECH REPUBLIC,+49:46:38,+017:32:31,748 m 
+----------------------------------------------------------------
+* Land use:
+Terrain located on a grassland surrounded by forest. The larger area is a mixture of forest and grasslands.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 17:32:31E, 49:46:38N at 750 m to current position on January 1 2000<br>transition from manual to automated observations on September 25 1996
+
+----------------------------------------------------------------
+3562,SUMPERK,CZECH REPUBLIC,+49:58:27,+016:58:03,328 m 
+----------------------------------------------------------------
+* Land use:
+Partly open landscape close to the northern edge of the village, with meadows and forests in the larger area. Shrubs and buildings close to the terrain.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 16:57:59E, 49:58:22N at 328 m to 16:57:56E, 49:58:23N at 330 m on June 22 1967, subsequent relocation to 16:58:10E, 48:58:21N at 318 m on January 1 1977, subsequent relocation to 16:58:18E, 49:57:29N at 311 m on April 1 1990, subsequent relocation to 16:58:03E, 49:58:27N at 328 m on January 1 1998<br>transition from manual to automated observations on January 1 1998
+
+----------------------------------------------------------------
+3563,PRAHA,CZECH REPUBLIC,+50:06:01,+014:15:20,364 m 
+----------------------------------------------------------------
+* Land use:
+Open landscape with meadows and arable lands in the vicinity alternate with infra structure / buildings. Terrain located the national airport. 
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 14:15:28E, 50:06:03N at 374 m to current position on September 1 1976<br>transition from manual to automated observations on January 1 2000
+
+----------------------------------------------------------------
+3564,SEMCICE,CZECH REPUBLIC,+50:22:02,+015:00:13,234 m 
+----------------------------------------------------------------
+* Land use:
+Open landscape with meadows and arable lands, terrain located south of the village with small trees and shrubs in the immediate vicinity.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 15:00:16E, 50:22:02N at 234 m to current position on October 21 2004<br>transition from manual to automated observations on October 21 2004
+
+----------------------------------------------------------------
+3565,ZATEC,CZECH REPUBLIC,+50:20:29,+013:32:35,210 m 
+----------------------------------------------------------------
+* Land use:
+Partly open landscape with arable lands and meadows. Terrain located close to a building.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 13:32:50E, 50:19:57N at 201 m to current position on December 1 2003<br>transition from manual to automated observations on December 1 2003
+
+----------------------------------------------------------------
+3566,PRAHA-KLEMENTINUM2,CZECH REPUBLIC,+50:05:27,+014:25:09,191 m 
+----------------------------------------------------------------
+* Land use:
+Terrain located in the old part of the city of Prague.
+* Soil type:
+
+* Surface coverage:
+
+* History:
+transition from manual to automated observations on June 1 2012
+
+----------------------------------------------------------------
+3972,STRAZNICE,CZECH REPUBLIC,+48:53:57,+017:20:17,176 m 
+----------------------------------------------------------------
+* Land use:
+Partly open landscape with arable lands and meadows, terrain located east of the village with shrubs, small trees and a building in the vicinity.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 17:20:17E, 48:53:57N at 176 m to 17:18:47E, 48:53:33N at 187 m on April 20 1979, <br> subsequently relocated to 17:20:17E, 48:53:57N at 176 m on December 1 1982, <br> transition from manual to automated observations on June 10 1999.
+
+----------------------------------------------------------------
+3973,VELKE MEZIRICI,CZECH REPUBLIC,+49:21:10,+016:00:31,452 m 
+----------------------------------------------------------------
+* Land use:
+Station located in the close proximity of a house close at the eastern side of the village. The larger area is an laternation of forests and arable lands.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+transition from manual to automated observations on September 29 1999.
+
+----------------------------------------------------------------
+3974,KOCELOVICE,CZECH REPUBLIC,+49:28:02,+013:50:19,519 m 
+----------------------------------------------------------------
+* Land use:
+Partly open, slightly hilly landscape with meadows and arable lands.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 13:50:27E, 49:28:01N at 519 m to this position at 515 m on January 1 2000<br>transition from manual voluntary climate station to manual synoptic station on January 3 1975<br>transition from manual to automated observations on January 1 2000
+
+----------------------------------------------------------------
+3975,VRAZ,CZECH REPUBLIC,+49:23:04,+014:07:44,433 m 
+----------------------------------------------------------------
+* Land use:
+Partly open landscape with meadows, arable lands and forests. Terrain located near a building in the northern part of the village with shrubs and small trees in the vicinity.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 14:07:60E, 49:22:60N at 453 m to 14:07:60E, 49:22:60N at 440 m on June 1 1968, <br> subsequently relocated to 14:07:29E, 49:22:56N at 440 m on June 1 1988, <br> subsequently relocated to 14:07:50E, 49:23:05N at 432 m on February 1 1997, <br> subsequently relocated to 14:07:44E, 49:23:04N at 433 m on July 1 1997<br>transition from manual to automated observations on July 1 1997
+
+----------------------------------------------------------------
+3976,VYSSI BROD,CZECH REPUBLIC,+48:37:03,+014:18:52,559 m 
+----------------------------------------------------------------
+* Land use:
+Partly open landscape with meadows and arable lands. Terrain close to a small river. 
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 14:18:22E, 48:37:06N at 628 m to 14:18:34E, 48:37:10N at 628 m on December 1 1950, <br> subsequently relocated to 14:18:52E, 48:37:03N at 559 m on February 5 1957<br>transition from manual voluntary precipitation station to manual voluntary climate station on May 1 1954<br>transition from manual to automated observations on July 1 1997
+
+----------------------------------------------------------------
+3977,BROUMOV,CZECH REPUBLIC,+50:34:12,+016:20:37,373 m 
+----------------------------------------------------------------
+* Land use:
+Partly open landscape with meadows and arable lands.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 16:19:60E, 50:36:15N at 405 m to current position on December 1 2000<br>transition from manual to automated observations on December 1 2000
+
+----------------------------------------------------------------
+3978,CHOTUSICE,CZECH REPUBLIC,+49:56:27,+015:23:11,238 m 
+----------------------------------------------------------------
+* Land use:
+Open landscape surrounded by arable lands with concrete infra structure in the immediate vicinity. Terrain located on the airport.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+transition from manual voluntary climate station to automated synoptic station on January 1 2005
+
+----------------------------------------------------------------
+3979,PRIMDA,CZECH REPUBLIC,+49:40:10,+012:40:41,743 m 
+----------------------------------------------------------------
+* Land use:
+Terrain located on grasslands surrounded by forest in a hilly landscape, with in the larger area alternations between forest and arabla land and meadows.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 12:40:46E, 49:40:10N at 742 m to current position on January 1 2000<br>transition from manual to automated observations on January 1 2000
+
+----------------------------------------------------------------
+3980,JAVORNIK,CZECH REPUBLIC,+50:23:44,+017:00:27,284 m 
+----------------------------------------------------------------
+* Land use:
+Terrain located on the NE edge of the village surrounded by meadows and arable lands. Shrubs, small trees and buildings in the immediate vicinity of the terrain.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 17:00:00E, 50:24:00N at 249 m to 16:56:32E, 50:22:30N at 480 m on October 9 1962, <br> subsequently relocated to 17:00:16E, 50:23:40N at 293 m on September 1 1971, <br> subsequently relocated to 17:00:27E, 50:23:44N at 289 m on June 1 1996<br>transition from manual voluntary precipitation station to manual voluntary climate station on January 9 1979<br>transition from manual to automated observations on January 1 1998
+
+----------------------------------------------------------------
+3981,LUKA,CZECH REPUBLIC,+49:39:08,+016:57:12,510 m 
+----------------------------------------------------------------
+* Land use:
+Partly open landscape surrounded by arable lands and meadows. Shrubs and small trees in the immediate vicinity of the terrain.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+transition from manual to automated observations on January 1 2000
+
+----------------------------------------------------------------
+3982,VSETIN,CZECH REPUBLIC,+49:20:39,+017:59:46,387 m 
+----------------------------------------------------------------
+* Land use:
+Hilly landscape with alternate forest and meadows with the terrain located well north of the village. Shrubs, small trees and buildings in the immediate vicinity of the terrain.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 17:58:42E, 49:20:32N at 340 m to 17:59:40E, 49:20:42N at 380 m on December 1 1950, <br> subsequently relocated to 17:59:50E, 49:20:33N at 375 m on June 1 1952, <br> subsequently relocated to 17:59:46E, 49:20:40N at 388 m on April 1 1957, subsequently relocated to 17:59:46E, 49:20:40N at 388 m on October 1 1957, <br> subsequently relocated to 17:59:46E, 49:20:39N at 387 m on January 1 1990<br>transition from manual to automated observations on January 1 1998
+
+----------------------------------------------------------------
+3983,DOKSANY,CZECH REPUBLIC,+50:27:32,+014:10:12,158 m 
+----------------------------------------------------------------
+* Land use:
+Open, slightly hilly landscape with meadows and arable lands and a small river to the west.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+transition from manual to automated observations on April 1 2000
+
+----------------------------------------------------------------
+3984,NOVA VES V HORACH,CZECH REPUBLIC,+50:35:33,+013:29:08,725 m 
+----------------------------------------------------------------
+* Land use:
+Open, slightly hilly landscape with forests at a larger distance (approx. 1 km). Terrain located in the vicinity of a building, trees and shrubs.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 13:28:54E, 50:35:42N at 726 m to 13:28:59E, 50:35:34N at  726 m on July 1 1959, <br> subsequently relocated to 13:29:08E, 50:35:34N at 725 m on June 30 1971<br>transition from manual to automated observations on December 1 2004
+
+----------------------------------------------------------------
+3985,VARNSDORF,CZECH REPUBLIC,+50:54:20,+014:36:08,367 m 
+----------------------------------------------------------------
+* Land use:
+Terrain located at the eastern outskirts of the city with meadows and forests in the proximity.
+* Soil type:
+
+* Surface coverage:
+grass
+* History:
+relocated from 14:37:00E, 50:54:00N at 332 m to 14:37:21E, 50:54:50N at 338 m on May 1 1953, <br> subsequently relocated to 14:37:36E, 50:53:28N at 360 m on May 1 1967, <br> subsequently relocated to 14:37:39E, 50:54:11N at 330 m on August 25 1967, <br> subsequently relocated to 14:36:22E, 50:54:31N at 365 m on August 23 2002<br>transition from manual to automated observations on December 1 2004
+
+----------------------------------------------------------------
+11141,IVANOVICE NA HANE,CZECH REPUBLIC,+49:18:33,+017:05:22,243 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 17:05:45E, 49:18:53N at 232m to current position on October 2 1980<br> transition from manual to automated observations on August 1 2010
+
+----------------------------------------------------------------
+11142,PROTIVANOV,CZECH REPUBLIC,+49:28:40,+016:49:52,675 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 16:50:07E, 49:29:08N at 651m to 16:49:54E, 49:28:38N at 670m on September 1 1953<br> subsequently relocated to current position on December 1 1953<br> transition from manual voluntary precipitation station to manual voluntary climate station on November 1 1953<br> transition from manual to automated observations on June 11 1999
+
+----------------------------------------------------------------
+11143,STARE MESTO,CZECH REPUBLIC,+49:05:30,+017:25:56,221 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 17:25:38E, 49:04:24N at 175m to current position on April 9 1956
+
+----------------------------------------------------------------
+11144,STRANI,CZECH REPUBLIC,+48:54:10,+017:42:28,383 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 17:26:18E, 49:04:49N at 190m to 17:25:54E, 49:05:30N at 221m on December 12 1968<br> subsequently relocated to current position on August 12 1999<br> transition from manual to automated observations on August 12 1999
+
+----------------------------------------------------------------
+11145,VIZOVICE,CZECH REPUBLIC,+49:13:23,+017:50:37,313 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 17:42:04E, 48:54:10N at 421m to 17:42:29E, 48:54:10N at 385m on July 1 1982<br> subsequently relocated to current position on December 15 1998<br> transition from manual voluntary precipitation station to manual voluntary climate station on May 16 1953<br> transition from manual to automated observations on December 15 1998
+
+----------------------------------------------------------------
+11146,BYSTRICE NAD PERNSTEJNEM,CZECH REPUBLIC,+49:31:27,+016:15:14,553 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 17:51:22E, 49:13:24N at 297m to 17:50:38E, 49:13:23N at 303m on September 1 1955<br> subsequently relocated to current position on August 20 1968<br> transition from manual to automated observations on December 17 1998
+
+----------------------------------------------------------------
+11147,DRNHOLEC,CZECH REPUBLIC,+48:51:32,+016:28:48,210 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 16:15:00E, 49:30:54N at 573m to current position on November 26 2008<br> transition from manual to automated observations on August 1 2013
+
+----------------------------------------------------------------
+11148,LEDNICE,CZECH REPUBLIC,+48:47:33,+016:47:56,177 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 16:27:49E, 48:51:53N at 179m to 16:29:17E, 48:51:27N at 210m on March 1 1991<br> subsequently relocated to 16:29:24E, 48:51:24N at 180m on February 16 1994<br> subsequently relocated to 16:29:24E, 48:51:24N at 190m on February 1 1995<br> subsequently relocated to current position on May 1 2013
+
+----------------------------------------------------------------
+11149,MORAVSKE BUDEJOVICE,CZECH REPUBLIC,+49:03:40,+015:48:24,460 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 16:47:57E, 48:47:47N to current position on January 1 1962<br> transition from manual to automated observations on January 1 2012
+
+----------------------------------------------------------------
+11150,POHORELICE,CZECH REPUBLIC,+48:59:04,+016:31:42,180 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 15:48:30E, 49:02:58N at 457m to current position on May 1 2006<br> transition from manual voluntary precipitation station to manual voluntary climate station on March 1 1955<br> transition from manual to automated observations on February 1 2011
+
+----------------------------------------------------------------
+11151,SLAVONICE,CZECH REPUBLIC,+48:59:45,+015:21:20,519 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 16:31:00E, 48:58:39N at 183m to current position on May 1 2006<br> transition from manual to automated observations on January 1 2012
+
+----------------------------------------------------------------
+11152,ZDANICE,CZECH REPUBLIC,+49:04:19,+017:01:32,238 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 15:20:44E, 48:59:52N at 517m to current position on September 1 2011
+
+----------------------------------------------------------------
+11153,HUSINEC,CZECH REPUBLIC,+49:03:08,+013:59:18,483 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 17:01:37E, 49:03:53N at 228m to 17:01:54E, 49:03:59N at 225m on May 22 1981<br> subsequently relocated to 17:02:12E, 49:03:59N at 255m on February 1 1994<br> subsequently relocated to current position on August 1 2014
+
+----------------------------------------------------------------
+11154,LENORA,CZECH REPUBLIC,+48:56:04,+013:46:10,804 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 13:59:34E, 49:02:23N at 536m to 13:59:24E, 49:03:09N at 492m on October 11 2001<br> subsequently relocated to current position on September 1 2002<br> transition from manual to automated observations on July 1 1997
+
+----------------------------------------------------------------
+11155,STRAKONICE,CZECH REPUBLIC,+49:15:05,+013:55:27,427 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 13:48:13E, 48:55:23N at 764m to current position on October 1 1993<br> transition from manual to automated observations on June 4 2010
+
+----------------------------------------------------------------
+11156,BORKOVICE,CZECH REPUBLIC,+49:12:29,+014:38:13,419 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 13:54:00E, 49:16:00N at 402m to 13:55:00E, 49:16:00N at 390m on January 1 1965<br> subsequently relocated to 13:56:00E, 49:15:00N at 478m on January 1 1971<br> subsequently relocated to 13:55:28E, 49:15:05N at 423m on February 24 1975<br> subsequently relocated to current position on July 1 2003<br> transition from manual to automated observations on January 13 2012
+
+----------------------------------------------------------------
+11157,BYNOV,CZECH REPUBLIC,+48:49:00,+014:48:00,475 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 14:39:14E, 49:12:42N at 413m to current position on March 1 1997<br> transition from manual to automated observations on June 24 2010
+
+----------------------------------------------------------------
+11158,CERNOVICE,CZECH REPUBLIC,+49:21:27,+014:57:45,580 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 14:48:01E, 48:48:56N at 475m to current position on July 1 1997<br> transition from manual voluntary precipitation station to manual voluntary climate station on January 1 1979<br> transition from  manual to automated observations on July 1 1997
+
+----------------------------------------------------------------
+11159,JINDRICHUV HRADEC,CZECH REPUBLIC,+49:09:20,+014:57:27,524 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 14:57:48E, 49:22:22N at 600m to current position on September 26 1985<br> transition from manual voluntary precipitation station to manual voluntary climate station on July 17 1962<br> transition from manual to automated observations on June 10 2010
+
+----------------------------------------------------------------
+11160,NADEJKOV,CZECH REPUBLIC,+49:31:01,+014:27:55,616 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 15:00:00E, 49:09:00N at 478m to 14:58:30E, 49:09:07N at 503m on March 30 1983<br> subsequently relocated to 14:57:21E, 49:09:37N at 525m on November 1 1991<br> subsequently relocated to current position on June 1 1997<br> transition from manual to automated observations on June 1 1997
+
+----------------------------------------------------------------
+11161,HORINEVES,CZECH REPUBLIC,+50:18:25,+015:45:55,271 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 14:28:00E, 49:31:00N at 617m to 14:27:58E, 49:31:02N at 615m on April 1 1972<br> subsequently relocated to current position on July 1 1997<br> transition from manual to automated observations on July 1 1997
+
+----------------------------------------------------------------
+11162,PEC POD SNEZKOU,CZECH REPUBLIC,+50:41:31,+015:43:44,816 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+11163,UPICE,CZECH REPUBLIC,+50:30:23,+016:00:42,413 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 15:44:00E, 50:42:00N at 805m to 15:43:44E, 50:41:31N at 824m on February 1 1988<br> subsequently relocated to current position on October 1 2004<br> transition from  manual synoptic station to manual voluntary climate station on February 1 1988<br> transition from manual voluntary climate station to automatic synoptic station on October 1 2004
+
+----------------------------------------------------------------
+11164,ROKYTNICE V ORLIC.HORACH,CZECH REPUBLIC,+50:09:52,+016:27:37,577 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+transition from manual to automated observations on November 30 2000
+
+----------------------------------------------------------------
+11165,HOLOVOUSY,CZECH REPUBLIC,+50:22:37,+015:34:41,321 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 16:27:24E, 50:09:54N at 572m to current position on October 17 2002<br> transition from manual to automated observations on October 17 2002
+
+----------------------------------------------------------------
+11166,PARDUBICE,CZECH REPUBLIC,+50:00:58,+015:44:25,225 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 15:34:38E, 50:22:29N at 321m to current position on April 6 2006<br> transition from manual to automated observations on April 6 2006
+
+----------------------------------------------------------------
+11167,PODEBRADY,CZECH REPUBLIC,+50:08:26,+015:08:01,189 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+transition from manual to automated observations on February 1 2005
+
+----------------------------------------------------------------
+11168,DOMAZLICE,CZECH REPUBLIC,+49:26:41,+012:55:21,460 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 15:06:46E, 50:08:43N at 196m to current position on May 28 2002<br> transition from manual to automated observations on May 28 2002
+
+----------------------------------------------------------------
+11169,PLZEN,CZECH REPUBLIC,+49:47:19,+013:23:11,328 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+transition from manual to automated observations on February 23 2012
+
+----------------------------------------------------------------
+11170,STANKOV,CZECH REPUBLIC,+49:33:09,+013:04:03,362 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 13:23:16E, 49:47:14N at 328m to current position on January 1 2000<br> transition from manual to automated observations on January 1 2000
+
+----------------------------------------------------------------
+11171,HOLOUBKOV,CZECH REPUBLIC,+49:46:30,+013:42:41,428 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 13:04:33E, 49:33:10N at 362m to 13:04:08E, 49:33:11N at 362m on January 1 1961<br> subsequently relocated to current position on May 1 1999<br> transition from manual to automated observations on May 1 1999
+
+----------------------------------------------------------------
+11172,KRALOVICE,CZECH REPUBLIC,+49:58:54,+013:29:38,448 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 13:41:27E, 49:46:34N at 443m to current position on June 1 2013
+
+----------------------------------------------------------------
+11173,MANETIN,CZECH REPUBLIC,+49:59:33,+013:13:39,433 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 12:58:40E, 49:53:06N at 522m to current position on January 1 2002<br> transition from manual to automated observations on January 1 2002
+
+----------------------------------------------------------------
+11174,RAKOVNIK,CZECH REPUBLIC,+50:06:05,+013:43:38,320 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 13:29:39E, 49:59:20N at 468m to 13:29:28E, 49:59:16N at 468m on January 1 2000<br> subsequently relocated to current position on June 18 2014<br> transition from manual to automated observations on January 1 2000
+
+----------------------------------------------------------------
+11175,STRIBRO,CZECH REPUBLIC,+49:45:16,+012:59:49,412 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 13:14:16E, 49:59:23N at 426m to current position on January 1 2013
+
+----------------------------------------------------------------
+11176,TACHOV,CZECH REPUBLIC,+49:47:54,+012:37:23,483 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 13:44:05E, 50:06;28N at 354m  to 13:44:00E, 50:06:29N at 354m on July 1 1996<br> subsequently relocated to current position on September 1 2011
+
+----------------------------------------------------------------
+11177,AS   ,CZECH REPUBLIC,+50:13:14,+012:10:47,675 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 12:59:51E, 49:45:16N at 412m to current position on December 12 2012<br> transition from manual to automated observations on December 12 2012
+
+----------------------------------------------------------------
+11178,NEJDEK,CZECH REPUBLIC,+50:20:08,+012:42:55,610 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 12:37:27E, 49:47:57N at 483m to current position on November 1 1996
+
+----------------------------------------------------------------
+11179,HAT,CZECH REPUBLIC,+49:56:45,+018:15:15,220 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 12:12:48E, 50:13:18N at 700m to 12:10:47E, 50:13:15N at 675m on January 1 1961<br> subsequently relocated to current position on March 15 2012<br> transition from manual to automated observations on March 15 2012
+
+----------------------------------------------------------------
+11180,JABLUNKOV,CZECH REPUBLIC,+49:35:15,+018:45:01,380 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 12:45:05E, 50:19:01N at 590m to current position on October 1 1996<br> transition from manual voluntary precipitation station to automatic voluntary climate station on September 1 2011
+
+----------------------------------------------------------------
+11181,KRNOV,CZECH REPUBLIC,+50:04:41,+017:41:32,360 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+11182,LUCINA,CZECH REPUBLIC,+49:43:51,+018:26:33,300 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 18:45:14E, 49:34:23N at 401m to 18:45:28E, 49:34:35N at 395m on September 13 1966<br> subsequently relocated to 18:44:39E, 49:35:38N at 378m on July 1 1969<br> subsequently relocated to current position on January 1 2008<br> transition from manual voluntary precipitation station to manual voluntary climate station on January 1 1951<br> transition from manual to automated observations on March 27 2012
+
+----------------------------------------------------------------
+11183,MELC ,CZECH REPUBLIC,+49:50:58,+017:45:25,478 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 17:42:48E, 50:05:10N at 313m to 17:41:20E, 50:05:10N, at 320m on October 1 1954<br> subsequently relocated to 17:42:52E, 50:04:52N at 364m on January 1 1957<br> subsequently relocated to 17:41:37E, 50:06:28N at 331m on August 1 1994<br> subsequently relocated to 17:42:46E, 50:05:51N at 323m on June 1 1996<br> subsequently relocated to 17:41:35E, 50:04:10N at 360m on January 1 2011<br> subsequently relocated to current position on April 21 2011<br> transition from manual voluntary climate station to manual voluntary precipitation station on January 1 2011<br> transition to automatic voluntary climate station on April 21 2011
+
+----------------------------------------------------------------
+11184,OPAVA,CZECH REPUBLIC,+49:55:11,+017:52:34,270 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+transition from manual to automated observations on January 1 1998
+
+----------------------------------------------------------------
+11185,SERAK,CZECH REPUBLIC,+50:11:15,+017:06:30,1328 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 17:46:05E, 49:50:48N at 458m to 17:45:55E, 49:50:38N at 475m on January 1 1967<br> subsequently relocated to 17:45:34E, 49:50:58N at 470m on January 1 1972<br> subsequently relocated to 17:45:50E, 49:50:55N at 470m on June 1 2003<br> subsequently relocated to current position at July 1 2014
+
+----------------------------------------------------------------
+11186,ZLATE HORY,CZECH REPUBLIC,+50:15:10,+017:23:33,444 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 17:52:42E, 49:55:50N at 272m to current position on April 1 1998<br> transition from manual to automated observations on April 1 1998
+
+----------------------------------------------------------------
+11187,MORAVSKA TREBOVA,CZECH REPUBLIC,+49:42:00,+016:45:24,315 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 17:06:31E, 50:11:15N at 1328m to current position on April 1 2010
+
+----------------------------------------------------------------
+11188,OLOMOUC,CZECH REPUBLIC,+49:34:33,+017:17:04,210 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 17:23:30E, 50:15:36N at 427m to 17:23:52E, 50:16:00N at 400m on January 1 1958<br> subsequently relocated to 17:23:46E, 50:15:19N at 421m on November 1 1969<br> subsequently relocated to 17:23:20E, 50:15:34N at 433m on January 1 1995<br> subsequently relocated to 17:24:01E, 50:15:50N at 415m on January 1 1996<br> subsequently relocated to 17:23:24E, 50:15:40N at 416m on July 1 2004<br> subsequently relocated to current position on March 21 2013<br> transition from manual voluntary precipitation station to automatic voluntary climate station on March 21 2013
+
+----------------------------------------------------------------
+11189,PASEKA,CZECH REPUBLIC,+49:47:48,+017:13:51,292 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 16:45:20E, 49:42:05N at 306m to current location on May 1 1964
+
+----------------------------------------------------------------
+11190,VELKY UJEZD,CZECH REPUBLIC,+49:34:32,+017:28:56,358 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 17:14:12E, 49:34:33N at 225m to 17:13:01E, 49:34:10N at 257m on March 1 1993<br> subsequently relocated to 17:16:58E, 49:34:27N at 210m on February 15 2000<br> subsequently relocated to current position on July 19 2004<br> transition from manual to automated observations on January 1 1998
+
+----------------------------------------------------------------
+11191,HORNI BECVA,CZECH REPUBLIC,+49:25:52,+018:17:54,565 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 17:13:52E, 49:48:28N at 375m to 17:13:31E, 49:48:26N at 325m on October 5 2000<br> subsequently relocated to 17:13:51E, 49:47:48N at 290m on January 1 2002<br> subsequently relocated to current position on October 11 2010<br> transition from manual voluntary climate station to manual voluntary climate station with automatic rain gauge on July 1 2007<br> transition to automatic voluntary climate station on October 11 2010
+
+----------------------------------------------------------------
+11192,NEUMETELY,CZECH REPUBLIC,+49:51:15,+014:02:15,322 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 17:28:54E, 49:34:29N at 356m to 17:28:56E, 49:34:30N at 356m on October 15 1963<br> subsequently relocated to 17:28:48E, 49:34:31N at 363m on December 1 1991<br> subsequently relocated to 17:29:02E, 49:34:44N at 378m on November 1 1994<br> subsequently relocated to 17:29:16E, 49:34:29N at 377m on September 1 2001<br> subsequently relocated to current position on February 1 2015
+
+----------------------------------------------------------------
+11193,BENECKO,CZECH REPUBLIC,+50:40:18,+015:33:00,880 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 18:18:57E, 49:25:23N at 551m to current position on December 1 2001<br> transition from manual voluntary precipitation station to manual voluntary climate station on January 1 1987<br> transition to manual voluntary precipitation station on October 1 1994<br> transition to manual voluntary climate station on December 2001<br> transition from manual to automated observations on July 15 2010
+
+----------------------------------------------------------------
+11194,BRANDYS NAD LABEM-ST.B,CZECH REPUBLIC,+50:11:23,+014:39:38,179 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+11195,DESNA,CZECH REPUBLIC,+50:47:22,+015:19:11,772 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 14:02:14E, 49:51:11N at 322m to current position on August 27 2004<br> transition from manual to automated observations on August 27 2004
+
+----------------------------------------------------------------
+11196,HAVLICKUV BROD,CZECH REPUBLIC,+49:36:43,+015:34:47,455 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 15:33:32E, 50:39:51N at 880m to current position on September 1 1994<br> transition from manual voluntary climate station to manual voluntary precipitation station on September 1 1994
+
+----------------------------------------------------------------
+11197,KOSETICE,CZECH REPUBLIC,+49:34:25,+015:04:50,532 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+transition from manual to automated observations on November 1 2009
+
+----------------------------------------------------------------
+11198,ONDREJOV,CZECH REPUBLIC,+49:54:26,+014:47:05,485 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 15:19:09E, 50:47:23N at 772m to current position on October 22 2004<br> transition from manual to automated observations on October 22 2004
+
+----------------------------------------------------------------
+11199,TUSIMICE,CZECH REPUBLIC,+50:22:36,+013:19:41,322 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+transition from manual to automated observations on September 5 2009
+
+----------------------------------------------------------------
+11200,KOPISTY,CZECH REPUBLIC,+50:32:39,+013:37:22,240 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 15:06:40E, 49:33:35N at 528m to 15:04:47E, 49:34:24N at 534m on November 14 1987<br> subsequently relocated to current position on November 17 2001<br> transition from manual voluntary precipitation station to manual synoptic station on November 14 1987<br> transition from manual to automated observations on November 17 2001
+
+----------------------------------------------------------------
+11201,TEPLICE,CZECH REPUBLIC,+50:39:18,+013:51:08,236 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 14:46:52E, 49:54:39N at 526m to current position on January 1 1985<br> transition from manual to automated observations on October 20 2004
+
+----------------------------------------------------------------
+11202,USTI NAD LABEM,CZECH REPUBLIC,+50:41:00,+014:02:28,375 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+transition from manual to automated observations on November 30 2001
+
+----------------------------------------------------------------
+11203,CHRIBSKA,CZECH REPUBLIC,+50:51:10,+014:31:28,440 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 13:37:24E, 50:32:39N at 240m to current position on May 14 2008<br> transition from manual voluntary climate station to manual synoptic station on April 12 2000<br> transition to automatic voluntary climate station on December 6 2000<br> transition to automatic synoptic station on May 14 2008
+
+----------------------------------------------------------------
+11204,DOKSY,CZECH REPUBLIC,+50:34:05,+014:40:02,284 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 13:48:00E, 50:39:00N at 230m to 13:49:42E, 50:38:18N at 225m on May 1 1950<br> subsequently relocated to 13:48:53E, 50:38:02N at 225m on January 1 1979<br> subsequently relocated to 13:49:18E, 50:37:48N at 280m on March 1 1986<br> subsequently relocated to 13:49:28E, 50:39:13N at 255m on May 1 1996<br> subsequently relocated to current position on May 16 2001<br> transition from manual to automated observations on December 19 2002
+
+----------------------------------------------------------------
+11205,KONSTANTINOVY LAZNE,CZECH REPUBLIC,+49:53:05,+012:58:33,527 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 14:02:28E, 50:41:02N at 375,4m to current position on November 30 2010<br> transition from manual to automated observations on January 1 2000
+
