@@ -19,6 +19,7 @@ def gtrr(r, a, b, c): r[c] = 1 if r[a] > r[b] else 0
 def eqir(r, a, b, c): r[c] = 1 if a == r[b] else 0
 def eqri(r, a, b, c): r[c] = 1 if r[a] == b else 0
 def eqrr(r, a, b, c): r[c] = 1 if r[a] == r[b] else 0
+def prde(r, a, b, c): r[c] = r[c] = r[a] // b
 ops = {
     'addr': addr,
     'addi': addi,
@@ -36,6 +37,8 @@ ops = {
     'eqir': eqir,
     'eqri': eqri,
     'eqrr': eqrr,
+    'prde': prde,
+    'nono': None,
 }
 
 instructions = []
@@ -48,22 +51,22 @@ ipr = 5
 
 register = [0] + [0] * 5
 ip = 0
-s = set()
-with tqdm() as t:
+li = []
+with tqdm(total=11545) as t:
     while ip < len(instructions):
-        t.update()
         op, a, b, c = instructions[ip]
         op(register, a, b, c)
-        print(ip, str(op)[10:14], a, b, c, register)
-        # print([bin(r)[2:] for r in register])
+        # print(ip, str(op)[10:14], a, b, c, register)
         register[ipr] += 1
         ip = register[ipr]
-        if ip == 6:
-            print('----', ip, str(op)[10:14], a, b, c, register)
-            # print([bin(r)[2:] for r in register])
-        if t.n > 10000:
-            break
+        if ip == 29:
+            if register[3] in li:
+                print(li[-1], len(li))
+                break
+            li.append(register[3])
+            t.update()
 register[ipr] -= 1
 
 
 print(register)
+print(li[-1])

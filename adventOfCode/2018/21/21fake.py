@@ -17,7 +17,7 @@ while True:
         three *= 65899
         three &= (2**24 - 1)
     if three in li:
-        print(li[-1])
+        print(li[-1], len(li))
         break
     li.append(three)
     # print(three)
