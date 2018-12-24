@@ -54,10 +54,9 @@ def get_V(sel):
         a = fc(sel.z - sel.x - sel.y - dc * sel.r)
 
         m = (c - b) / 2, (b - a) / 2, (c + a) / 2
-        print(m, dist(*m))
         if in_range(*m).sum() < len(sel):
             continue
-        if int(m[0]) == m[0] or int(m[1]) == m[1] or int(m[1]) == m[1]:
+        if int(m[0]) != m[0] or int(m[1]) != m[1] or int(m[1]) != m[1]:
             continue
         if best is None or dist(*m) < dist(*best):
             best = m
@@ -91,7 +90,6 @@ p = get_V(m)
 print(p)
 print(sum(p), in_range(*p).sum())
 
-exit()
 
 if False:
     d = df[~m]
@@ -121,7 +119,7 @@ if False:
     exit()
 
 
-if False:
+if True:
 
     counts = []
     for x, y, z, r in tqdm(df[['x', 'y', 'z', 'r']].sort_values('r', ascending=False).values):
@@ -130,12 +128,14 @@ if False:
 
     res = []
     with tqdm() as t:
-        for i, j in combinations(np.argsort(counts)[::-1], 2):
-    #     while True:
-    #         i, j, k = np.random.randint(0, 999, 3)
+    #     for i, j in combinations(np.argsort(counts)[::-1], 2):
+        while True:
+            i, j, k = np.random.randint(0, 999, 3)
             t.update(1)
             sel = df.loc[[i, j]]
             p = get_V(sel)
+            if p is None:
+                continue
             res.append((-sum(in_range(*p)), sum(p)))
             if t.n % 1000 == 0:
                 print(min(res))
