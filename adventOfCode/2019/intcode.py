@@ -1,55 +1,85 @@
-def get_value(memory, index, mode):
-    if mode == 0:
-        return memory[memory[index]]
-    if mode == 1:
-        return memory[index]
-    assert False, f'invalid mode {mode}'
+class IntCode:
+    def __init__(self, memory):
+        self.memory = memory
+        self.pointer = 0
+        self.relative_base = 0
 
+    def get_value(self, index, mode):
+        if mode == 0:
+            index = self.memory[index]
+        if mode == 2:
+            index = self.relative_base + self.memory[index]
+        if index >= len(self.memory):
+            return 0
+        return self.memory[index]
 
-def intcode(memory, debug=False):
-    pointer = 0
-    while True:
-        instruction = memory[pointer]
-        opcode = instruction % 100
-        modes = list(map(int, str(instruction)[:-2][::-1])) + [0] * 3
-        if opcode == 1:
-            assert modes[2] == 0
-            memory[memory[pointer + 3]] = get_value(memory, pointer + 1, modes[0]) + get_value(memory, pointer + 2, modes[1])
-            pointer += 4
-        elif opcode == 2:
-            assert modes[2] == 0
-            memory[memory[pointer + 3]] = get_value(memory, pointer + 1, modes[0]) * get_value(memory, pointer + 2, modes[1])
-            pointer += 4
-        elif opcode == 3:
-            assert modes[0] == 0
-            memory[memory[pointer + 1]] = int(input('Inser value: '))
-            pointer += 2
-        elif opcode == 4:
-            print('output: ', get_value(memory, pointer + 1, modes[0]))
-            pointer += 2
-        elif opcode == 5:
-            if get_value(memory, pointer + 1, modes[0]) != 0:
-                pointer = get_value(memory, pointer + 2, modes[1])
+    def set_value(self, index, mode, value):
+        if mode == 0:
+            index = self.memory[index]
+        if mode == 2:
+            index = self.relative_base + self.memory[index]
+        if index >= len(self.memory):
+            self.memory += [0] * (index - len(self.memory) + 1)
+        self.memory[index] = value
+
+    def run(self, debug=False, inputs=None, print_outputs=False, halt_on_output=False):
+        if inputs:
+            inputs = iter(inputs)
+        outputs = []
+    
+        while True:
+            instruction = self.memory[self.pointer]
+            opcode = instruction % 100
+            modes = list(map(int, str(instruction)[:-2][::-1])) + [0] * 3
+            if opcode == 1:
+                value = self.get_value(self.pointer + 1, modes[0]) + self.get_value(self.pointer + 2, modes[1])
+                self.set_value(self.pointer + 3, modes[2], value)
+                self.pointer += 4
+            elif opcode == 2:
+                value = self.get_value(self.pointer + 1, modes[0]) * self.get_value(self.pointer + 2, modes[1])
+                self.set_value(self.pointer + 3, modes[2], value)
+                self.pointer += 4
+            elif opcode == 3:
+                if inputs:
+                    value = next(inputs)
+                else:
+                    value = int(input('Inser value: '))
+                self.set_value(self.pointer + 1, modes[0], value)
+                self.pointer += 2
+            elif opcode == 4:
+                output = self.get_value(self.pointer + 1, modes[0])
+                if print_outputs:
+                    print('output: ', output)
+                self.pointer += 2
+                if halt_on_output:
+                    return output
+                outputs.append(output)
+            elif opcode == 5:
+                if self.get_value(self.pointer + 1, modes[0]) != 0:
+                    self.pointer = self.get_value(self.pointer + 2, modes[1])
+                else:
+                    self.pointer += 3
+            elif opcode == 6:
+                if self.get_value(self.pointer + 1, modes[0]) == 0:
+                    self.pointer = self.get_value(self.pointer + 2, modes[1])
+                else:
+                    self.pointer += 3
+            elif opcode == 7:
+                value = 1 if self.get_value(self.pointer + 1, modes[0]) < self.get_value(self.pointer + 2, modes[1]) else 0
+                self.set_value(self.pointer + 3, modes[2], value)
+                self.pointer += 4
+            elif opcode == 8:
+                value = 1 if self.get_value(self.pointer + 1, modes[0]) == self.get_value(self.pointer + 2, modes[1]) else 0
+                self.set_value(self.pointer + 3, modes[2], value)
+                self.pointer += 4
+            elif opcode == 9:
+                self.relative_base += self.get_value(self.pointer + 1, modes[0])
+                self.pointer += 2
+            elif opcode == 99:
+                if halt_on_output:
+                    return None
+                return outputs
             else:
-                pointer += 3
-        elif opcode == 6:
-            if get_value(memory, pointer + 1, modes[0]) == 0:
-                pointer = get_value(memory, pointer + 2, modes[1])
-            else:
-                pointer += 3
-        elif opcode == 7:
-            value = 1 if get_value(memory, pointer + 1, modes[0]) < get_value(memory, pointer + 2, modes[1]) else 0
-            assert modes[2] == 0
-            memory[memory[pointer + 3]] = value
-            pointer += 4
-        elif opcode == 8:
-            value = 1 if get_value(memory, pointer + 1, modes[0]) == get_value(memory, pointer + 2, modes[1]) else 0
-            assert modes[2] == 0
-            memory[memory[pointer + 3]] = value
-            pointer += 4
-        elif opcode == 99:
-            return memory
-        else:
-            assert False
-        if debug:
-            print(memory)
+                assert False, f'invalid opcode {opcode}'
+            if debug:
+                print(self.pointer, self.relative_base, self.memory)
