@@ -22,7 +22,7 @@ class IntCode:
             self.memory += [0] * (index - len(self.memory) + 1)
         self.memory[index] = value
 
-    def run(self, debug=False, inputs=None, print_outputs=False, halt_on_output=False):
+    def run(self, debug=False, inputs=None, print_outputs=False, halt_on_output=False, halt_on_missing_input=False):
         if inputs:
             inputs = iter(inputs)
         outputs = []
@@ -41,7 +41,12 @@ class IntCode:
                 self.pointer += 4
             elif opcode == 3:
                 if inputs:
-                    value = next(inputs)
+                    try:
+                        value = next(inputs)
+                    except StopIteration:
+                        if halt_on_missing_input:
+                            return outputs
+                        raise Exception('Missing inputs')
                 else:
                     value = int(input('Inser value: '))
                 self.set_value(self.pointer + 1, modes[0], value)
