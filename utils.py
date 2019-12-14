@@ -20,3 +20,25 @@ def memoize(f):
 
 def is_square(n):
     return int(math.sqrt(n)) ** 2 == n
+
+
+def binary_search(fce, goal, lower, upper=None):
+    if upper is None:
+        upper = lower
+        while fce(upper) < goal:
+            upper *= 2
+
+        while lower < upper - 1:
+            mid = (lower + upper) // 2
+            value = fce(mid)
+            if value > goal:
+                upper = mid
+            elif value < goal:
+                lower = mid
+            else:
+                return mid
+        if fce(lower) == goal:
+            return lower
+        if fce(upper) == goal:
+            return upper
+        return lower, upper
