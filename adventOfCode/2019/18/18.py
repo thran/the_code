@@ -1,3 +1,4 @@
+from operator import itemgetter
 from random import choice
 
 import numpy as np
@@ -88,31 +89,20 @@ field.show()
 # print(field.keys)
 # print(field.available_keys(field.initial_x, field.initial_y, 'a'))
 
-with tqdm() as t, tqdm(desc='keys solved') as t2:
+field.best = None
 
-    def solve(x=field.initial_x, y=field.initial_y, keys=''):
-        if len(keys) == len(field.keys):
-            # t.update(1)
-            return 0
 
-        available = field.available_keys(x, y, keys)
-        m = min(available.values())
-        s = 0
-        for k, d in available.items():
-            if d > m * 2:
-                continue
-            s += 1
-        # print(x, y, len(field.keys) - len(keys), available, s)
+def solve(x=field.initial_x, y=field.initial_y, keys='', distance=0):
+    if len(keys) == len(field.keys):
+        if field.best is None or distance < field.best:
+            field.best = distance
+            print(field.best, keys)
 
-        options = []
-        m = min(available.values())
-        for k, d in available.items():
-            if d > m * 1.5:
-                continue
-            nx, ny = field.keys[k]
-            options.append(d + solve(nx, ny, keys + k))
-        if t2.n < len(field.keys) - len(keys):
-            t2.update(len(field.keys) - len(keys) - t2.n)
-        return min(options)
+    available = field.available_keys(x, y, keys)
+    # print(x, y, len(field.keys) - len(keys), available, s)
 
-    print(solve())
+    for k, d in sorted(available.items(), key=itemgetter(1)):
+        nx, ny = field.keys[k]
+        solve(nx, ny, keys + k, distance + d)
+
+solve()
