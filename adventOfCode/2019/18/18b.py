@@ -5,20 +5,22 @@ from random import choice
 import numpy as np
 from tqdm import tqdm
 
-from utils import memoize
-
 
 class Field:
 
     def __init__(self):
         self.data = []
         self.keys = {}
-        with open('input.txt') as f:
+        self.initial_x = {}
+        self.initial_y = {}
+        self.graph = {}
+        with open('input_b.txt') as f:
             for row, line in enumerate(f):
                 self.data.append([s for s in line.strip().replace('@', '.')])
-                if '@' in line:
-                    self.initial_x = line.index('@')
-                    self.initial_y = row
+                for s in '1234':
+                    if s in line:
+                        self.initial_x[s] = line.index(s)
+                        self.initial_y[s] = row
                 for col, s in enumerate(line.strip()):
                     if s.lower() == s and s not in '.#@':
                         self.keys[s] = col, row
@@ -76,16 +78,16 @@ class Field:
     def get_distances(self):
         self.distances = distances = {}
         self.doors = doors = {}
-        for k, (x, y) in list(self.keys.items()) + [('@', (self.initial_x, self.initial_y))]:
+        for k, (x, y) in list(self.keys.items()) + [(s, (self.initial_x[s], self.initial_y[s])) for s in '1234']:
             for k2, (d, ds) in self.available_keys(x, y, [k], get_doors=True).items():
                 distances[(k, k2)] = d
                 doors[(k, k2)] = ds
         return distances, doors
 
-    def get_graph(self):
-        x = self.initial_x
-        y = self.initial_y
-        visited = {(x, y): '@'}
+    def get_graph(self, start):
+        x = self.initial_x[start]
+        y = self.initial_y[start]
+        visited = {(x, y): start}
         next = {(x, y)}
         while len(next) > 0:
             new = set()
@@ -103,9 +105,9 @@ class Field:
                         visited[(nx, ny)] = visited[(x, y)]
                     new.add((nx, ny))
             next = new
-        self.graph = {}
         for key, (x, y) in self.keys.items():
-            self.graph[key] = visited[(x, y)]
+            if (x, y) in visited:
+                self.graph[key] = visited[(x, y)]
         self.leaves = set(self.keys.keys()) - set(self.graph.values())
         return self.leaves
 
@@ -113,10 +115,11 @@ class Field:
         available = {}
         if fast:
             for key in self.keys.keys():
-                if key == fast or key in keys:
+                if key in fast.values() or key in keys:
                     continue
-                if self.doors[(fast, key)] <= set(keys):
-                    available[key] = self.distances[(fast, key)]
+                for r, f in fast.items():
+                    if (f, key) in self.distances and self.doors[(f, key)] <= keys:
+                        available[key] = r, self.distances[(f, key)]
             return available
 
         visited = {(x, y): None}
@@ -155,27 +158,57 @@ class Field:
 
 
 field = Field()
-field.show()
+# field.show()
 # print(field.keys)
 # print(field.available_keys(field.initial_x, field.initial_y, set(field.keys.keys())))
 
 field.best = None
 field.get_distances()
-field.get_graph()
+for s in '1234':
+    field.get_graph(s)
 
 
-@memoize
-def solve(key='@', keys=''):
-    if len(keys) == len(field.keys):
-        return 0
+best = ['vd','o','mr','e','p','j','u','a','c','k','g','w','i','n','z','y','s','f','x','t','l','q','h','b']
+score = 10**4
 
-    available = field.available_keys(None, None, keys, fast=key)
 
-    options = []
-    for k, d in available.items():
-        options.append(d + solve(k, ''.join(sorted(keys + k))))
-    return min(options)
+def get_score(path):
+    keys = set()
+    distance = 0
+    currents = {s: s for s in '1234'}
+    for key in ''.join(path):
+        available = field.available_keys(None, None, keys, fast=currents)
+        if not key in available:
+            return
+        r, d = available[key]
+        distance += d
+        keys |= {key}
+        currents[r] = key
+    return distance
 
-print(solve())
-print(field.best)
+
+while True:
+    for mk in best:
+        s = [b for b in best if b != mk]
+        for i in range(0, 27):
+            ss = s[:i] + [mk] + s[i:]
+            distance = get_score(ss)
+            if distance is not None and score >= distance:
+                if np.random.rand() > .1:
+                    print(distance, ''.join(ss))
+                    best = ss
+                    score = distance
+    # break
+
+
+if False:
+    from graphviz import Digraph
+    g = Digraph()
+    for k in list(field.keys.keys()) + list('1234'):
+        g.node(k)
+    for k, v in field.graph.items():
+        if (v, k) in field.doors:
+            g.edge(k, v, ', '.join(field.doors[(v, k)]))
+    g.render('keys.gv', view=True)
+
 
