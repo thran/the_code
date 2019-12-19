@@ -1,3 +1,4 @@
+from collections import defaultdict
 from operator import itemgetter
 from random import choice
 
@@ -38,7 +39,7 @@ class Field:
         elif direction == 3:
             return x - 1, y
 
-    def is_free(self, x, y, keys):
+    def is_free(self, x, y, keys, ignore_doors=False):
         s = self.data[x, y]
         if s == '.':
             return True
@@ -47,7 +48,7 @@ class Field:
         if s.lower() == s:
             return True
         if s.upper() == s:
-            return s.lower() in keys
+            return ignore_doors or s.lower() in keys
         assert False
 
     def is_key(self, x, y):
@@ -60,49 +61,147 @@ class Field:
             return s
         return False
 
-    def available_keys(self, x, y, keys):
+    def is_door(self, x, y):
+        s = self.data[x, y]
+        if s == '.':
+            return False
+        if s == '#':
+            return False
+        if s.upper() == s:
+            return s
+        return False
+
+    def get_distances(self):
+        self.distances = distances = {}
+        self.doors = doors = {}
+        for k, (x, y) in list(self.keys.items()) + [('@', (self.initial_x, self.initial_y))]:
+            for k2, (d, ds) in self.available_keys(x, y, [k], get_doors=True).items():
+                distances[(k, k2)] = d
+                doors[(k, k2)] = ds
+        return distances, doors
+
+    def get_graph(self):
+        x = self.initial_x
+        y = self.initial_y
+        visited = {(x, y): '@'}
+        next = {(x, y)}
+        while len(next) > 0:
+            new = set()
+            for x, y in sorted(next):
+                for d in [0, 1, 2, 3]:
+                    nx, ny = self.get_next_position(d, x, y)
+                    if (nx, ny) in visited:
+                        continue
+                    if not self.is_free(nx, ny, {}, ignore_doors=True):
+                        continue
+                    k = self.is_key(x, y)
+                    if k:
+                        visited[(nx, ny)] = k
+                    else:
+                        visited[(nx, ny)] = visited[(x, y)]
+                    new.add((nx, ny))
+            next = new
+        self.graph = {}
+        for key, (x, y) in self.keys.items():
+            self.graph[key] = visited[(x, y)]
+        self.leaves = set(self.keys.keys()) - set(self.graph.values())
+        return self.leaves
+
+    def available_keys(self, x, y, keys, get_doors=False, fast=None):
+        available = {}
+        if fast:
+            for key in self.keys.keys():
+                if key == fast or key in keys:
+                    continue
+                if self.doors[(fast, key)] <= keys:
+                    available[key] = self.distances[(fast, key)]
+            return available
+
         visited = {(x, y): None}
+        doors = defaultdict(set)
         steps = 0
         next = {(x, y)}
-        available = {}
         while len(next) > 0:
             new = set()
             for x, y in sorted(next):
                 k = self.is_key(x, y)
                 if k and k not in keys:
                     available[k] = steps
+                    if not get_doors:
+                        continue
                 for d in [0, 1, 2, 3]:
                     nx, ny = self.get_next_position(d, x, y)
+                    if (nx, ny) == visited[(x, y)]:
+                        continue
                     if (nx, ny) in visited:
                         continue
-                    if not self.is_free(nx, ny, keys):
+                    if not self.is_free(nx, ny, keys, ignore_doors=get_doors):
                         continue
+                    if get_doors:
+                        nd = doors[(x, y)]
+                        d = self.is_door(nx, ny)
+                        if d:
+                            nd = nd | {d.lower()}
+                        doors[(nx, ny)] = nd
                     visited[(nx, ny)] = x, y
                     new.add((nx, ny))
             next = new
             steps += 1
+        if get_doors:
+            return {k: (d, doors[self.keys[k]]) for k, d in available.items()}
         return available
 
 
 field = Field()
 field.show()
 # print(field.keys)
-# print(field.available_keys(field.initial_x, field.initial_y, 'a'))
+# print(field.available_keys(field.initial_x, field.initial_y, set(field.keys.keys())))
 
 field.best = None
+field.get_distances()
+field.get_graph()
+
+from graphviz import Digraph
+g = Digraph()
+for k in list(field.keys.keys()) + ['@']:
+    g.node(k)
+for k, v in field.graph.items():
+    g.edge(k, v, ', '.join(field.doors[(v, k)]))
+g.render('keys.gv', view=True)
 
 
-def solve(x=field.initial_x, y=field.initial_y, keys='', distance=0):
+
+
+def solve(key=' ', keys=None, distance=0):
+    if field.best and distance >= field.best:
+        return
+    if keys is None:
+        keys = set()
     if len(keys) == len(field.keys):
         if field.best is None or distance < field.best:
             field.best = distance
-            print(field.best, keys)
+            print(field.best)
+            return
 
-    available = field.available_keys(x, y, keys)
-    # print(x, y, len(field.keys) - len(keys), available, s)
+    available = field.available_keys(None, None, keys, fast=key)
+    # print(x, y, len(field.keys) - len(keys), available)
+    if not available:
+        return
 
+    for k, d in available.items():
+        if field.graph[k] == key and k in field.leaves:
+            solve(k, keys | {k}, distance + d)
+            return
+
+    m = min(available.values())
+    # for k, d in available.items():
     for k, d in sorted(available.items(), key=itemgetter(1)):
-        nx, ny = field.keys[k]
-        solve(nx, ny, keys + k, distance + d)
+        if d > m * 3:
+            continue
+        solve(k, keys | {k}, distance + d)
+        if distance < 10:
+            print(keys)
 
-solve()
+# solve()
+print(field.best)
+
