@@ -3,6 +3,7 @@ class IntCode:
         self.memory = memory
         self.pointer = 0
         self.relative_base = 0
+        self.steps = 0
 
     def get_value(self, index, mode):
         if mode == 0:
@@ -28,6 +29,7 @@ class IntCode:
         outputs = []
     
         while True:
+            self.steps += 1
             instruction = self.memory[self.pointer]
             opcode = instruction % 100
             modes = list(map(int, str(instruction)[:-2][::-1])) + [0] * 3
