@@ -24,7 +24,7 @@ class IntCode:
         self.memory[index] = value
 
     def run(self, debug=False, inputs=None, print_outputs=False, halt_on_output=False, halt_on_missing_input=False):
-        if inputs:
+        if inputs is not None:
             inputs = iter(inputs)
         outputs = []
     
@@ -42,7 +42,7 @@ class IntCode:
                 self.set_value(self.pointer + 3, modes[2], value)
                 self.pointer += 4
             elif opcode == 3:
-                if inputs:
+                if inputs is not None:
                     try:
                         value = next(inputs)
                     except StopIteration:
