@@ -1,4 +1,5 @@
 from fractions import Fraction
+from functools import reduce
 from math import sqrt
 from collections import defaultdict
 from utils import memoize
