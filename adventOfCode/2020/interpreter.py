@@ -24,7 +24,14 @@ class Interpreter:
             ))
         return instructions
 
-    def run(self):
+    def reset(self):
+        self.position = 0
+        self.accumulator = 0
+        self.visited_positions = set()
+
+    def run(self, reset=False):
+        if reset:
+            self.reset()
         while True:
             if self.position in self.visited_positions:
                 return False

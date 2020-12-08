@@ -17,7 +17,6 @@ for i, (operation, argument) in enumerate(instructions):
         continue
 
     instructions[i] = 'nop' if operation == 'jmp' else 'jmp', argument
-    interpreter = Interpreter(instructions)
-    if interpreter.run():
+    if interpreter.run(reset=True):
         print(interpreter.accumulator)
     instructions[i] = operation, argument
