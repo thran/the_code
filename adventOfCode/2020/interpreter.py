@@ -1,5 +1,3 @@
-from typing import Generator
-
 from parse import parse
 
 
@@ -15,7 +13,8 @@ class Interpreter:
 
         self.visited_positions = set()
 
-    def parse_instructions(self, lines):
+    @staticmethod
+    def parse_instructions(lines):
         instructions = []
         for line in lines:
             result = parse('{operation} {argument:d}', line.strip())
