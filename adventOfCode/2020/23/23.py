@@ -6,13 +6,11 @@ from pathlib import Path
 class Cups:
     def __init__(self, cups):
         self.next = {}
-        self.cups = set()
         self.max = 0
 
         self.current = None
         last = None
         for cup in cups:
-            self.cups.add(cup)
             self.max = max(self.max, cup)
             if last is None:
                 self.current = cup
