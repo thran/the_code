@@ -1,4 +1,7 @@
 from pathlib import Path
+from icecream import install
+
+install()
 
 
 class AdventOfCode:
