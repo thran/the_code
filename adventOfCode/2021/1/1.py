@@ -6,14 +6,8 @@ from core import AdventOfCode
 
 
 class Level(AdventOfCode):
-
-    @property
-    def part_one_test_solution(self):
-        return 7
-
-    @property
-    def part_two_test_solution(self):
-        return 5
+    part_one_test_solution = 7
+    part_two_test_solution = 5
 
     def get_increases(self, values):
         increases = 0

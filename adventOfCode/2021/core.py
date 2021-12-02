@@ -2,6 +2,8 @@ from pathlib import Path
 
 
 class AdventOfCode:
+    part_one_test_solution = None
+    part_two_test_solution = None
 
     @property
     def test_input(self):
@@ -23,14 +25,6 @@ class AdventOfCode:
             return lines[0]
 
         return list(lines)
-
-    @property
-    def part_one_test_solution(self):
-        return None
-
-    @property
-    def part_two_test_solution(self):
-        return None
 
     def part_one(self, input_) -> int:
         pass

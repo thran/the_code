@@ -6,8 +6,14 @@ from core import AdventOfCode
 
 
 class Level(AdventOfCode):
-    part_one_test_solution = None
-    part_two_test_solution = None
+
+    @property
+    def part_one_test_solution(self):
+        return None
+
+    @property
+    def part_two_test_solution(self):
+        return None
 
     def part_one(self, depths) -> int:
         ...
