@@ -17,7 +17,7 @@ class Level(AdventOfCode):
         position = np.round(np.median(numbers))
         return int(abs(numbers - position).sum())
 
-    def part_two(self, numbers) -> int:
+    def wrong_but_working_part_two(self, numbers) -> int:
         float_position = np.mean(numbers)
         solutions = []
         for position in (np.floor(float_position), np.ceil(float_position)):
@@ -26,5 +26,25 @@ class Level(AdventOfCode):
             solutions.append(fuels.sum())
         return int(min(solutions))
 
+    def part_two(self, numbers) -> int:
+        start_position = np.round(np.mean(numbers))
+
+        def _compute_cost(position):
+            distance = abs(numbers - position)
+            fuels = (distance * (distance + 1)) // 2
+            return fuels.sum()
+
+        solutions = []
+        for dx in [-1, 1]:
+            d = 0
+            solutions.append(_compute_cost(start_position))
+            while True:
+                d += 1
+                solution = _compute_cost(start_position + d * dx)
+                if solution >= solutions[-1]:
+                    break
+                solutions.append(solution)
+
+        return int(min(solutions))
 
 Level().run()
