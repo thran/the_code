@@ -1,7 +1,3 @@
-# start: :
-# 1.:    :
-# 2.:    :
-
 from core import AdventOfCode
 
 
