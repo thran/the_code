@@ -18,7 +18,10 @@ class AdventOfCode:
 
     def load_file(self, file_path):
         with Path(file_path).open() as f:
-            return self.preprocess_input(f.readlines())
+            input_ = self.preprocess_input(map(lambda l: l.strip(), f.readlines()))
+            if type(input_) is not tuple:
+                return (input_, )
+            return input_
 
     def preprocess_input(self, lines):
         lines = [line.strip() for line in lines]
@@ -29,18 +32,18 @@ class AdventOfCode:
 
         return list(lines)
 
-    def part_one(self, input_) -> int:
+    def part_one(self, *input_) -> int:
         pass
 
-    def part_two(self, input_) -> int:
+    def part_two(self, *input_) -> int:
         pass
 
     def run(self):
-        part_one = self.part_one(self.test_input)
+        part_one = self.part_one(*self.test_input)
         assert part_one == self.part_one_test_solution, f'invalid solution {part_one}'
-        print(f'part 1: {self.part_one(self.input)}')
+        print(f'part 1: {self.part_one(*self.input)}')
 
         if self.part_two_test_solution is not None:
-            part_two = self.part_two(self.test_input)
+            part_two = self.part_two(*self.test_input)
             assert  part_two == self.part_two_test_solution, f'invalid solution {part_two}'
-            print(f'part 2: {self.part_two(self.input)}')
+            print(f'part 2: {self.part_two(*self.input)}')
