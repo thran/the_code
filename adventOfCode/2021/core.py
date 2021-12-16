@@ -18,13 +18,13 @@ class AdventOfCode:
 
     def load_file(self, file_path):
         with Path(file_path).open() as f:
-            input_ = self.preprocess_input(map(lambda l: l.strip(), f.readlines()))
+            lines = list(map(lambda l: l.strip(), f.readlines()))
+            input_ = self.preprocess_input(lines)
             if type(input_) is not tuple:
-                return (input_, )
+                return input_,
             return input_
 
     def preprocess_input(self, lines):
-        lines = [line.strip() for line in lines]
         if all(line.isnumeric() for line in lines):
             lines = list(map(int, lines))
         if len(lines) == 0:
