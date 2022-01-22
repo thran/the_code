@@ -210,7 +210,7 @@ class RandomSolver(PruningSolver):
 
 class MaxInformationSolver(PruningSolver):
 
-    CHOICE_COUNT = 10
+    CHOICE_COUNT = 5
 
     def __init__(self, wordle: Wordle, language, hard_mode=True, interactive=False):
         self.hard_mode = hard_mode
@@ -249,8 +249,11 @@ class MaxInformationSolver(PruningSolver):
             print('Select guess:')
             for i, (choice, e) in enumerate(choices):
                 print(f'{i + 1:>2}: {choice.upper()} ({e:.3f})')
-            n = int(input('insert number: '))
-            return choices[n - 1][0]
+            answer = input('insert number: ')
+            if answer.isnumeric():
+                return choices[int(answer) - 1][0]
+            else:
+                return answer
 
         best_option, _ = max(option_entropy.items(), key=itemgetter(1))
         return best_option
