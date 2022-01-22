@@ -23,6 +23,6 @@ if __name__ == '__main__':
 
     filter_dictionary(
         Path(f'{LANGUAGE}.txt'),
-        Path(f'{LANGUAGE}.{LENGTH}.txt'),
+        Path(f'{LANGUAGE}-{LENGTH}.solutions.txt'),
         LENGTH
     )
