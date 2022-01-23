@@ -161,7 +161,7 @@ class WordleSolver(abc.ABC):
                 print('Result  ', hash_comparison(comparison))
             if solved:
                 if verbose:
-                    print(f'\nSolved in {wordle.guesses} guesses')
+                    print(f'\nSolved in {self.wordle.guesses} guesses')
                 return
             new_knowledge = GuessKnowledge(guess, comparison)
             if self.knowledge:
@@ -171,7 +171,7 @@ class WordleSolver(abc.ABC):
             if verbose and self.knowledge:
                 print('Current knowledge:')
                 print(self.knowledge)
-            self._after_guess()
+            self._after_guess(verbose=verbose)
 
             if verbose:
                 print()
@@ -180,7 +180,7 @@ class WordleSolver(abc.ABC):
     def _get_guess(self) -> str:
         pass
 
-    def _after_guess(self):
+    def _after_guess(self, verbose=True):
         pass
 
 
@@ -192,18 +192,20 @@ class ManualSolver(WordleSolver):
 
 class PruningSolver(WordleSolver, abc.ABC):
 
-    def _after_guess(self):
+    def _after_guess(self, verbose=True):
         self.dictionary = [
             word
             for word in self.dictionary
             if self.knowledge.is_matching(word)
         ]
-        print(f'Dictionary pruned to {len(self.dictionary)} words')
-        if len(self.dictionary) <= 5:
-            print('    ', ', '.join(self.dictionary))
+        if verbose:
+            print(f'Dictionary pruned to {len(self.dictionary)} words')
+            if len(self.dictionary) <= 5:
+                print('    ', ', '.join(self.dictionary))
 
 
 class RandomSolver(PruningSolver):
+    random.seed(42)
 
     def _get_guess(self) -> str:
         guess = random.choice(self.dictionary)
