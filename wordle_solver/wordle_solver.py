@@ -199,6 +199,8 @@ class PruningSolver(WordleSolver, abc.ABC):
             if self.knowledge.is_matching(word)
         ]
         print(f'Dictionary pruned to {len(self.dictionary)} words')
+        if len(self.dictionary) <= 5:
+            print('    ', ', '.join(self.dictionary))
 
 
 class RandomSolver(PruningSolver):
