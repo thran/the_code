@@ -231,15 +231,14 @@ class MaxInformationSolver(PruningSolver):
         json.dump(self.info_matrix, cache_path.open('w'))
 
     def _get_guess(self) -> str:
-        dictionary_set = set(self.dictionary)
 
         option_entropy = {}
         options = self.dictionary if self.hard_mode else self.info_matrix.keys()
         for option in options:
             counts = Counter()
-            for target, comparison in self.info_matrix[option].items():
-                if target in dictionary_set and target != option:
-                    counts[comparison] += 1
+            comparisons = self.info_matrix[option]
+            for target in self.dictionary:
+                counts[comparisons[target]] += 1
             boost = 1 / len(self.dictionary) if option in self.dictionary else 0
             # boost is hack for preferring to pick a word with chance to be solution
             option_entropy[option] = entropy(list(counts.values())) + boost
