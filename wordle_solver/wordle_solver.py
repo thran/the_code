@@ -213,6 +213,7 @@ class RandomSolver(PruningSolver):
 class MaxInformationSolver(PruningSolver):
 
     CHOICE_COUNT = 5
+    INFO_MATRIX_CACHE = {}
 
     def __init__(self, wordle: Wordle, language, hard_mode=True, interactive=False):
         self.hard_mode = hard_mode
@@ -220,17 +221,27 @@ class MaxInformationSolver(PruningSolver):
         super().__init__(wordle, language)
 
     def _prepare(self):
-        cache_path = self.DICTIONARIES_PATH / f'{self.language}.info_matrix.json'
+        self.info_matrix = self.get_info_matrix(self.language, self.dictionary, self.guess_dictionary)
+
+    @classmethod
+    def get_info_matrix(cls, language, dictionary, guess_dictionary):
+        if language in cls.INFO_MATRIX_CACHE:
+            return cls.INFO_MATRIX_CACHE[language]
+
+        cache_path = cls.DICTIONARIES_PATH / f'{language}.info_matrix.json'
         if cache_path.exists():
-            self.info_matrix = json.load(cache_path.open())
-            return
+            info_matrix = json.load(cache_path.open())
+            cls.INFO_MATRIX_CACHE[language] = info_matrix
+            return info_matrix
 
-        self.info_matrix = defaultdict(dict)
-        for guess in tqdm(self.guess_dictionary, desc='Preparing'):
-            for word in self.dictionary:
-                self.info_matrix[guess][word] = hash_comparison(compere_words(guess, word))
+        info_matrix = defaultdict(dict)
+        for guess in tqdm(guess_dictionary, desc='Preparing'):
+            for word in dictionary:
+                info_matrix[guess][word] = hash_comparison(compere_words(guess, word))
 
-        json.dump(self.info_matrix, cache_path.open('w'))
+        json.dump(info_matrix, cache_path.open('w'))
+        cls.INFO_MATRIX_CACHE[language] = info_matrix
+        return info_matrix
 
     def _get_guess(self) -> str:
 
