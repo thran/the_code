@@ -212,9 +212,9 @@ class RandomSolver(PruningSolver):
         return guess
 
 
-class MaxInformationSolver(PruningSolver):
+class MaxScoreSolver(PruningSolver):
 
-    CHOICE_COUNT = 5
+    CHOICE_COUNT = 10
     INFO_MATRIX_CACHE = {}
 
     def __init__(self, wordle: Wordle, language, hard_mode=True, interactive=False):
@@ -247,19 +247,13 @@ class MaxInformationSolver(PruningSolver):
 
     def _get_guess(self) -> str:
 
-        option_entropy = {}
+        option_score = {}
         options = self.dictionary if self.hard_mode else self.info_matrix.keys()
         for option in options:
-            counts = Counter()
-            comparisons = self.info_matrix[option]
-            for target in self.dictionary:
-                counts[comparisons[target]] += 1
-            boost = 1 / len(self.dictionary) if option in self.dictionary else 0
-            # boost is hack for preferring to pick a word with chance to be solution
-            option_entropy[option] = entropy(list(counts.values())) + boost
+            option_score[option] = self.get_score(option)
 
         if self.interactive:
-            choices = sorted(option_entropy.items(), key=itemgetter(1), reverse=True)[:self.CHOICE_COUNT]
+            choices = sorted(option_score.items(), key=itemgetter(1), reverse=True)[:self.CHOICE_COUNT]
             print('Select guess:')
             for i, (choice, e) in enumerate(choices):
                 print(f'{i + 1:>2}: {choice.upper()} ({e:.3f})')
@@ -269,18 +263,49 @@ class MaxInformationSolver(PruningSolver):
             else:
                 return answer
 
-        best_option, _ = max(option_entropy.items(), key=itemgetter(1))
+        best_option, _ = max(option_score.items(), key=itemgetter(1))
         return best_option
+
+    @abc.abstractmethod
+    def get_score(self, option):
+        pass
+
+
+class MaxInformationSolver(MaxScoreSolver):
+
+    def get_score(self, option):
+        counts = Counter()
+        comparisons = self.info_matrix[option]
+        for target in self.dictionary:
+            counts[comparisons[target]] += 1
+        boost = 1 / len(self.dictionary) if option in self.dictionary else 0
+        # boost is hack for preferring to pick a word with chance to be solution
+        return entropy(list(counts.values())) + boost
+
+
+class BestWorstSolver(MaxScoreSolver):
+    # for absurdle
+
+    def get_score(self, option):
+        counts = Counter()
+        comparisons = self.info_matrix[option]
+        for target in self.dictionary:
+            counts[comparisons[target]] += 1
+        boost = 1 / len(self.dictionary) if option in self.dictionary else 0
+        # boost is hack for preferring to pick a word with chance to be solution
+        return -max(counts.values()) + boost
 
 
 if __name__ == '__main__':
-    # wordle = WordWordle('wince')
+    # wordle = WordWordle('boxer')
     wordle = ManualWordle()
 
     language = 'en'
+    # language = 'cs-5'
     # solver = ManualSolver(wordle, language)
     # solver = RandomSolver(wordle, language)
-    solver = MaxInformationSolver(wordle, language, hard_mode=False, interactive=True)
+    # solver = MaxInformationSolver(wordle, language, hard_mode=False, interactive=True)
+    solver = BestWorstSolver(wordle, language, hard_mode=False, interactive=True)
     solver.solve()
 
 
