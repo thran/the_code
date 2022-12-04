@@ -6,8 +6,6 @@ class Level(AdventOfCode):
     part_two_test_solution = 4
 
     def preprocess_input(self, lines):
-        lines = super().preprocess_input(lines)
-
         ranges = []
         for line in lines:
             first, second = line.split(',')

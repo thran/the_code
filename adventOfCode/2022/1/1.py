@@ -6,8 +6,6 @@ class Level(AdventOfCode):
     part_two_test_solution = 45000
 
     def preprocess_input(self, lines):
-        lines = super().preprocess_input(lines)
-
         elves = [[]]
         for line in lines:
             if line.isnumeric():

@@ -8,8 +8,6 @@ class Level(AdventOfCode):
     part_two_test_solution = 12
 
     def preprocess_input(self, lines):
-        lines = super().preprocess_input(lines)
-
         rounds = []
         for line in lines:
             opponent, you = line.split()
