@@ -32,7 +32,7 @@ class AdventOfCode:
     def preprocess_input(self, lines):
         if all(line.isnumeric() for line in lines):
             lines = list(map(int, lines))
-        if len(lines) == 0:
+        if len(lines) == 1:
             return lines[0]
 
         return list(lines)
