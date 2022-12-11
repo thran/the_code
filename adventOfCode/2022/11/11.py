@@ -36,12 +36,17 @@ class Level(AdventOfCode):
         lines = iter(lines)
         while True:
             number = int(next(lines)[7:-1])
-            items = list(map(int, next(lines).split(': ')[1].split(', ')))
-            operation = eval('lambda old: ' + next(lines).split(' = ')[1])
-            divisible = int(next(lines).split()[-1])
-            throw = {True: int(next(lines).split()[-1]), False: int(next(lines).split()[-1])}
-            monkeys[number] = Monkey(items, operation, divisible, throw, monkeys)
-            if next(lines, -1) == -1:
+            monkeys[number] = Monkey(
+                items=list(map(int, next(lines).split(': ')[1].split(', '))),
+                operation=eval('lambda old: ' + next(lines).split(' = ')[1]),
+                divisible=int(next(lines).split()[-1]),
+                throw={
+                    True: int(next(lines).split()[-1]),
+                    False: int(next(lines).split()[-1]),
+                },
+                monkeys=monkeys,
+            )
+            if next(lines, True):
                 break
         return monkeys
 
