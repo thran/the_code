@@ -13,6 +13,7 @@ icecream = "^2.1.1"
 munkres = "^1.1.4"
 scipy = "^1.7.3"
 parse = "^1.19.0"
+networkx = "^2.8.8"
 
 [tool.poetry.dev-dependencies]
 
