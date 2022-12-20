@@ -21,11 +21,11 @@ class AdventOfCode:
             lines = list(map(lambda l: l.strip(), f.readlines()))
             input_ = self.preprocess_input(lines)
             if type(input_) is not tuple:
-                return input_,
+                return (input_,)
             return input_
 
     def preprocess_input(self, lines):
-        if all(line.isnumeric() for line in lines):
+        if all(line.isnumeric() or line[0] == '-' and line[1:].isnumeric() for line in lines):
             lines = list(map(int, lines))
         if len(lines) == 0:
             return lines[0]
@@ -45,5 +45,5 @@ class AdventOfCode:
 
         if self.part_two_test_solution is not None:
             part_two = self.part_two(*self.test_input)
-            assert  part_two == self.part_two_test_solution, f'invalid solution {part_two}'
+            assert part_two == self.part_two_test_solution, f'invalid solution {part_two}'
             print(f'part 2: {self.part_two(*self.input)}')
