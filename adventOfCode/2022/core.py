@@ -1,12 +1,20 @@
+import time
 from pathlib import Path
 from icecream import install
 
 install()
 
 
+def measure(function, input_):
+    t = time.process_time()
+    result = function(*input_)
+    return result, time.process_time() - t
+
+
 class AdventOfCode:
     part_one_test_solution = None
     part_two_test_solution = None
+    skip_tests = False
 
     @property
     def test_input(self):
@@ -27,7 +35,7 @@ class AdventOfCode:
     def preprocess_input(self, lines):
         if all(line.isnumeric() or line[0] == '-' and line[1:].isnumeric() for line in lines):
             lines = list(map(int, lines))
-        if len(lines) == 0:
+        if len(lines) == 1:
             return lines[0]
 
         return list(lines)
@@ -39,11 +47,16 @@ class AdventOfCode:
         pass
 
     def run(self):
-        part_one = self.part_one(*self.test_input)
-        assert part_one == self.part_one_test_solution, f'invalid solution {part_one}'
-        print(f'part 1: {self.part_one(*self.input)}')
+        if self.part_one_test_solution is not None:
+            part_one = self.part_one(*self.test_input)
+            if not self.skip_tests:
+                assert part_one == self.part_one_test_solution, f'invalid solution {part_one}'
+            result, t = measure(self.part_one, self.input)
+            print(f'part 1: {result:<20} in {t:.3g}s')
 
         if self.part_two_test_solution is not None:
             part_two = self.part_two(*self.test_input)
-            assert part_two == self.part_two_test_solution, f'invalid solution {part_two}'
-            print(f'part 2: {self.part_two(*self.input)}')
+            if not self.skip_tests:
+                assert part_two == self.part_two_test_solution, f'invalid solution {part_two}'
+            result, t = measure(self.part_two, self.input)
+            print(f'part 2: {result:<20} in {t:.3g}s')
