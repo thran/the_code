@@ -15,6 +15,7 @@ class AdventOfCode:
     part_one_test_solution = None
     part_two_test_solution = None
     skip_tests = False
+    strip_only_new_lines = False
 
     @property
     def test_input(self):
@@ -26,7 +27,10 @@ class AdventOfCode:
 
     def load_file(self, file_path):
         with Path(file_path).open() as f:
-            lines = list(map(lambda l: l.strip(), f.readlines()))
+            if self.strip_only_new_lines:
+                lines = list(map(lambda l: l.rstrip('\n'), f.readlines()))
+            else:
+                lines = list(map(lambda l: l.strip(), f.readlines()))
             input_ = self.preprocess_input(lines)
             if type(input_) is not tuple:
                 return (input_,)
@@ -48,15 +52,15 @@ class AdventOfCode:
 
     def run(self):
         if self.part_one_test_solution is not None:
-            part_one = self.part_one(*self.test_input)
             if not self.skip_tests:
+                part_one = self.part_one(*self.test_input)
                 assert part_one == self.part_one_test_solution, f'invalid solution {part_one}'
             result, t = measure(self.part_one, self.input)
             print(f'part 1: {result:<20} in {t:.3g}s')
 
         if self.part_two_test_solution is not None:
-            part_two = self.part_two(*self.test_input)
             if not self.skip_tests:
+                part_two = self.part_two(*self.test_input)
                 assert part_two == self.part_two_test_solution, f'invalid solution {part_two}'
             result, t = measure(self.part_two, self.input)
             print(f'part 2: {result:<20} in {t:.3g}s')
