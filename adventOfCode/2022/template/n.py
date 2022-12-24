@@ -12,4 +12,5 @@ class Level(AdventOfCode):
         ...
 
 
-Level().run()
+if __name__ == '__main__':
+    Level().run()
