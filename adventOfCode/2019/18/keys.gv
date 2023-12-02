@@ -1,0 +1,55 @@
+digraph {
+	r
+	o
+	z
+	y
+	m
+	s
+	q
+	g
+	l
+	e
+	u
+	v
+	j
+	t
+	d
+	f
+	h
+	k
+	c
+	n
+	p
+	b
+	a
+	i
+	w
+	x
+	"@"
+	r -> m [label=""]
+	o -> "@" [label=""]
+	z -> s [label="i, n, w"]
+	y -> s [label="i, n, w"]
+	m -> "@" [label=""]
+	s -> e [label=c]
+	q -> "@" [label=""]
+	g -> s [label=a]
+	l -> "@" [label="f, x"]
+	e -> "@" [label=v]
+	u -> t [label=e]
+	v -> "@" [label=""]
+	j -> t [label=""]
+	t -> "@" [label=d]
+	d -> v [label=""]
+	f -> x [label="z, y"]
+	h -> p [label=""]
+	k -> "@" [label=r]
+	c -> "@" [label="u, j"]
+	n -> i [label=""]
+	p -> t [label=""]
+	b -> f [label=l]
+	a -> c [label=p]
+	i -> p [label="o, g"]
+	w -> p [label=""]
+	x -> n [label=""]
+}
