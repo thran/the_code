@@ -22,6 +22,12 @@ class AdventOfCode:
         return self.load_file('input.test.txt')
 
     @property
+    def test_input2(self):
+        if Path('input.test2.txt').exists():
+            return self.load_file('input.test2.txt')
+        return self.test_input
+
+    @property
     def input(self):
         return self.load_file('input.txt')
 
@@ -60,7 +66,7 @@ class AdventOfCode:
 
         if self.part_two_test_solution is not None:
             if not self.skip_tests:
-                part_two = self.part_two(*self.test_input)
+                part_two = self.part_two(*self.test_input2)
                 assert part_two == self.part_two_test_solution, f'invalid solution {part_two}'
             result, t = measure(self.part_two, self.input)
             print(f'part 2: {result:<20} in {t:.3g}s')
