@@ -37,17 +37,17 @@ class Level(AdventOfCode):
         platform = self.roll(platform, 'north')
         return (self.get_weights(platform) * (platform == 'O')).sum()
 
-    def part_two(self, platform) -> int:
+    def part_two(self, platform, cycles=1000000000) -> int:
         visited_states = {}
         cycle = 0
-        while cycle < 1000000000:
+        while cycle < cycles:
             for direction in ['north', 'west', 'south', 'east']:
                 platform = self.roll(platform, direction)
             cycle += 1
             state = ''.join(platform.flatten())
             if state in visited_states:
                 cycle_length = cycle - visited_states[state]
-                cycle += (1000000000 - cycle) // cycle_length * cycle_length
+                cycle += (cycles - cycle) // cycle_length * cycle_length
             visited_states[state] = cycle
         return (self.get_weights(platform) * (platform == 'O')).sum()
 
