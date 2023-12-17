@@ -1,8 +1,8 @@
-from adventOfCode.utils import Search, array
+from adventOfCode.utils import BFS, array
 from core import AdventOfCode
 
 
-class BeamSearch(Search):
+class BeamSearch(BFS):
     DIRECTIONS = {
         'r': (0, 1),
         'l': (0, -1),
@@ -17,8 +17,8 @@ class BeamSearch(Search):
         'u': {'-': 'rl', '/': 'r', '\\': 'l'},
     }
 
-    def __init__(self, contraption, init_states, **kwargs):
-        super().__init__(init_states, **kwargs)
+    def __init__(self, contraption, init_states):
+        super().__init__(init_states)
         self.contraption = contraption
 
     def next_states(self, state):
@@ -37,7 +37,7 @@ class Level(AdventOfCode):
         return array([list(l) for l in lines])
 
     def solve(self, contraption, xy, direction):
-        search = BeamSearch(contraption, {(xy, direction)}, type_='BFS')
+        search = BeamSearch(contraption, {(xy, direction)})
         search()
         return len({xy for xy, d in search.visited_states})
 
