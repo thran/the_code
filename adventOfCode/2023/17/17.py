@@ -40,7 +40,7 @@ class PathSearch(PrioritySearch):
                 )
 
     def end_condition(self, state) -> bool:
-        return state[1] == self.end_position
+        return state[1] == self.end_position and state[3] >= self.min_steps
 
     def get_state_hash(self, state):
         return state[1:]
