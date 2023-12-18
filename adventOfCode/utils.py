@@ -37,7 +37,8 @@ class SmartArray(np.ndarray):
             if self.is_valid_position(neighbor):
                 yield neighbor
 
-    def change_position(self, position, delta):
+    @staticmethod
+    def change_position(position, delta):
         return tuple(x + d for x, d in zip(position, delta))
 
     def is_valid_position(self, position: tuple) -> bool:
