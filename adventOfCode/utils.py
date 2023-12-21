@@ -14,7 +14,7 @@ def array(values):
 class SmartArray(np.ndarray):
     @cached_property
     def direct_neighbors_deltas(self):
-        return [ds for ds in self.neighbors_deltas if sum(d != 0 for d in ds)]
+        return [ds for ds in self.neighbors_deltas if sum(d != 0 for d in ds) == 1]
 
     @cached_property
     def neighbors_deltas(self):
