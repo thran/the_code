@@ -47,6 +47,10 @@ class SmartArray(np.ndarray):
                 return False
         return True
 
+    def print_grid(self):
+        for row in self:
+            print(''.join(row))
+
 
 class Search(abc.ABC):
     def __init__(self, init_states):
@@ -124,3 +128,19 @@ class PrioritySearch(Search, abc.ABC):
 
     def add_state(self, state):
         heapq.heappush(self.states_to_visit, state)
+
+
+class SearchAll(DFS, abc.ABC):
+    def run(self):
+        while self.states_to_visit:
+            self.current_state = state = self.pop_state()
+            self.on_state_visit(state)
+            for new_state in self.next_states(state):
+                if self.end_condition(new_state):
+                    self.on_found(new_state)
+                    continue
+                self.add_state(new_state)
+
+    @abc.abstractmethod
+    def on_found(self, state):
+        ...
