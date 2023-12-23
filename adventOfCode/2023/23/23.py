@@ -1,4 +1,4 @@
-from collections import defaultdict
+from collections import defaultdict, deque
 
 import networkx as nx
 import numpy as np
@@ -71,6 +71,51 @@ class LongestPathSearch(SearchAll):
         self.found_lengths.add(state[2])
 
 
+def fast_search_stack(edges):
+    nodes = [False] * len(edges)
+    end_node = len(nodes)
+    best = 0
+    edges = [list(es.items()) for n, es in sorted(edges.items())]
+
+    stack = deque([(0, 0)])
+    while stack:
+        node, traveled = stack.pop()
+        if traveled == -1:
+            nodes[node] = False
+            continue
+        nodes[node] = True
+        stack.append((node, -1))
+        for neighbor, length in edges[node]:
+            if neighbor == end_node:
+                best = max(best, traveled + length)
+                continue
+            if not nodes[neighbor]:
+                stack.append((neighbor, length + traveled))
+
+    return best
+
+
+def fast_search(edges):
+    nodes = [False] * len(edges)
+    end_node = len(nodes)
+    best = 0
+    edges = [list(es.items()) for n, es in sorted(edges.items())]
+
+    def _find_max(node, traveled=0):
+        nonlocal best
+        nodes[node] = True
+        for neighbor, length in edges[node]:
+            if neighbor == end_node:
+                best = max(best, traveled + length)
+                continue
+            if not nodes[neighbor]:
+                _find_max(neighbor, length + traveled)
+        nodes[node] = False
+
+    _find_max(0)
+    return best
+
+
 class Level(AdventOfCode):
     part_one_test_solution = 94
     part_two_test_solution = 154
@@ -117,7 +162,9 @@ class Level(AdventOfCode):
                 else:
                     simple_edges[crossroads[node]][crossroads[n]] = l + (2 if n != maze.END else 0)
 
-        return max(LongestPathSearch(simple_edges, 0, len(components) - 1).found_lengths)
+        # return max(LongestPathSearch(simple_edges, 0, len(components) - 1).found_lengths)
+        return fast_search(simple_edges)
+        # return fast_search_stack(simple_edges)
 
     def part_two(self, maze) -> int:
         return self.part_one(maze, no_slip=True)
