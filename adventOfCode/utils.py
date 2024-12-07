@@ -51,6 +51,12 @@ class SmartArray(np.ndarray):
         for row in self:
             print(''.join(row))
 
+    def get(self, position, default):
+        try:
+            return self[position]
+        except IndexError:
+            return default
+
 
 class Search(abc.ABC):
     def __init__(self, init_states):
