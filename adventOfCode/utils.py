@@ -49,7 +49,7 @@ class SmartArray(np.ndarray):
 
     def print_grid(self):
         for row in self:
-            print(''.join(row))
+            print(''.join(map(str, row)))
 
     def get(self, position, default):
         try:
