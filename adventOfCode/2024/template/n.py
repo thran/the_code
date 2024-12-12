@@ -5,6 +5,9 @@ class Level(AdventOfCode):
     part_one_test_solution = None
     part_two_test_solution = None
 
+    def preprocess_input(self, lines):
+        return lines
+
     def part_one(self, lines) -> int:
         ...
 
