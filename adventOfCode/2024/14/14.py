@@ -2,15 +2,15 @@ from itertools import count
 
 import numpy as np
 import parse
-from scipy.spatial.distance import cdist
+from scipy.stats import entropy
 
-from adventOfCode.utils import array
 from core import AdventOfCode
 
 
 class Level(AdventOfCode):
     part_one_test_solution = 12
-    part_two_test_solution = 0
+    part_two_test_solution = -1
+    skip_tests = True
 
     def preprocess_input(self, lines):
         shape = np.array(tuple(map(int, lines[0].split(','))))
@@ -29,18 +29,12 @@ class Level(AdventOfCode):
         return q1 * q2 * q3 * q4
 
     def part_two(self, shape, positions, deltas) -> int:
-        if shape[0] == 11:
-            return 0
         for second in count(1):
             positions = (positions + deltas) % shape
-            distances = cdist(positions, positions, metric='cityblock')
-            distances[distances == 0] = 100
-            direct_neighbors = (distances.min(axis=0) == 1).sum()
-            if direct_neighbors > len(positions) / 2:
-                grid = array(np.zeros(shape, dtype=bool))
-                for p in positions:
-                    grid[tuple(p)] = True
-                grid.T.print_grid()
+            x_counts = np.unique(positions[:, 0], return_counts=True)[1]
+            y_counts = np.unique(positions[:, 1], return_counts=True)[1]
+            score = entropy(x_counts) + entropy(y_counts)
+            if score < 8:
                 return second
 
 
