@@ -48,8 +48,13 @@ class SmartArray(np.ndarray):
         return True
 
     def print_grid(self):
+        if self.dtype == bool:
+            visualizer = {False: ' ', True: '#'}.get
+        else:
+            visualizer = str
+
         for row in self:
-            print(''.join(map(str, row)))
+            print(''.join(map(visualizer, row)))
 
     def get(self, position, default):
         try:
