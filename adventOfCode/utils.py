@@ -12,6 +12,13 @@ def array(values):
 
 
 class SmartArray(np.ndarray):
+    DIRECTIONS = {
+        '^': (-1, 0),
+        '>': (0, 1),
+        'v': (1, 0),
+        '<': (0, -1),
+    }
+
     @cached_property
     def direct_neighbors_deltas(self):
         return [ds for ds in self.neighbors_deltas if sum(d != 0 for d in ds) == 1]
