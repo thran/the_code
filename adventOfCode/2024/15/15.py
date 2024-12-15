@@ -52,7 +52,7 @@ class Level(AdventOfCode):
         }
         return array([tuple(''.join(map(expansion.get, line))) for line in grid]), (position[0], position[1] * 2)
 
-    def check_position(self, grid, position, delta, only_check=False) -> bool:
+    def check_position(self, grid, position, delta) -> bool:
         content = grid[position]
         if content == '.':
             return True
@@ -60,7 +60,7 @@ class Level(AdventOfCode):
             return False
         next_position = grid.change_position(position, delta)
         if delta[0] == 0:
-            return self.check_position(grid, next_position, delta, only_check)
+            return self.check_position(grid, next_position, delta)
 
         next_position_side = grid.change_position(next_position, (0, -1 if content == ']' else 1))
         return self.check_position(grid, next_position, delta) and self.check_position(grid, next_position_side, delta)
