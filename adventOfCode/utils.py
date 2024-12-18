@@ -76,7 +76,8 @@ class Search(abc.ABC):
         self.states_to_visit = self.init_queue(init_states)
 
     def __call__(self):
-        return self.run()
+        self.run()
+        return self
 
     @abc.abstractmethod
     def init_queue(self, init_states):
