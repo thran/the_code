@@ -52,8 +52,8 @@ class Level(AdventOfCode):
         limit = 50 if grid.shape[0] < 20 else 100
         distances = self.find_distances(grid, start, end)
         points = np.array(tuple(distances))
-        shortcut_distances = cdist(points, points, metric='cityblock').astype(int)
-        pathlib_distances = np.array(tuple(distances.values()))
+        shortcut_distances = cdist(points, points, metric='cityblock').astype(np.int8)
+        pathlib_distances = np.array(tuple(distances.values())).astype(np.int8)
         pathlib_distances = pathlib_distances[:, None] - pathlib_distances[None, :]
         return ((shortcut_distances <= cheat) & (pathlib_distances - shortcut_distances >= limit)).sum()
 
