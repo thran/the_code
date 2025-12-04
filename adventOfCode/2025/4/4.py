@@ -1,3 +1,6 @@
+import numpy as np
+from scipy.signal import convolve2d
+
 from adventOfCode.utils import array, SmartArray
 from core import AdventOfCode
 
@@ -18,10 +21,26 @@ class Level(AdventOfCode):
             if cell and sum(floor[p] for p in floor.neighbors((row, column))) < 4
         )
 
+    def removable_fast(self, floor: SmartArray) -> np.array:
+        pattern = np.ones((3, 3), dtype=np.int8)
+        pattern[1, 1] = False
+
+        return (convolve2d(floor, pattern, mode='same') < 4) & floor
+
     def part_one(self, floor: SmartArray) -> int:
-        return len(tuple(self.removable(floor)))
+        return self.removable_fast(floor).sum()
 
     def part_two(self, floor: SmartArray) -> int:
+        removed = 0
+        while (to_remove := self.removable_fast(floor)).any():
+            removed += to_remove.sum()
+            floor[to_remove] = False
+        return removed
+
+    def part_one_slow(self, floor: SmartArray) -> int:
+        return len(tuple(self.removable(floor)))
+
+    def part_two_slow(self, floor: SmartArray) -> int:
         removed = 0
         while len(to_remove := array(list(self.removable(floor)))):
             removed += len(to_remove)
