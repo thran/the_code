@@ -41,11 +41,12 @@ class Level(AdventOfCode):
         result = 0
         for start, stop in ranges:
             for n in range(start, stop + 1):
+                s = str(n)
                 for length in range(1, len(str(n)) // 2 + 1):
                     if len(str(n)) % length != 0:
                         continue
                     repeats = len(str(n)) // length
-                    if len({n // 10 ** (i * length) % 10**length for i in range(repeats)}) == 1:
+                    if all(s[0:length] == s[i * length : (i + 1) * length] for i in range(1, repeats)):
                         result += n
                         break
 
