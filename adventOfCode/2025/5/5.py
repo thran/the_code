@@ -1,3 +1,5 @@
+from itertools import combinations
+
 from core import AdventOfCode
 
 
@@ -22,12 +24,11 @@ class Level(AdventOfCode):
         return sum(any(s <= ingredient <= e for s, e in fresh_ranges) for ingredient in ingredients)
 
     def find_intersecting_ranges(self, ranges):
-        for range1 in ranges:
-            for range2 in ranges:
-                if range1 == range2:
-                    continue
-                if range1[0] <= range2[0] <= range1[1] or range1[0] <= range2[1] <= range1[1]:
-                    return range1, range2
+        for range1, range2 in combinations(ranges, 2):
+            if range1 == range2:
+                continue
+            if range1[0] <= range2[0] <= range1[1] or range1[0] <= range2[1] <= range1[1]:
+                return range1, range2
         return None
 
     def part_two(self, _, fresh_ranges: set) -> int:
