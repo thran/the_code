@@ -89,10 +89,8 @@ class Level(AdventOfCode):
                 c=np.ones(len(buttons)),
                 A_eq=buttons.T,
                 b_eq=joltage,
-                bounds=(0, None),
                 integrality=1,
-                options={"presolve": False}
-                # method='simplex',
+                options={"presolve": False},
             )
             .x.round()
             .astype(int)
@@ -104,7 +102,3 @@ class Level(AdventOfCode):
 
 if __name__ == '__main__':
     Level().run()
-
-
-# 16278 low
-# 18202 high
